@@ -1,0 +1,8 @@
+prune 90_AUDITME
+prune task_hub
+prune artifacts
+prune .pytest_cache
+prune .mypy_cache
+prune dist
+prune build
+global-exclude *.py[cod]

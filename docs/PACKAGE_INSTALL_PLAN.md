@@ -1,6 +1,6 @@
 # Package And Install Plan
 
-> Status: release-preflight plan. No package source has been imported yet.
+> Status: release-preflight plan. No private engine code has been imported yet.
 
 This plan defines the public packaging target for AuditME `v0.1.0-alpha`.
 
@@ -67,7 +67,7 @@ Recommended baseline:
 
 ```toml
 [build-system]
-requires = ["setuptools>=69", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -76,7 +76,7 @@ version = "0.1.0a0"
 description = "Repo-native memory, guardrails, handoff state, and verification receipts for AI-assisted development."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "LicenseRef-Pending" }
+license = "LicenseRef-Pending"
 authors = [
   { name = "AuditME contributors" }
 ]
@@ -91,7 +91,8 @@ where = ["src"]
 
 [project.optional-dependencies]
 dev = [
-  "pytest>=8"
+  "pytest>=8",
+  "tomli>=2; python_version < '3.11'"
 ]
 ```
 
@@ -188,10 +189,11 @@ uv run auditme --help
 uv run pytest
 ```
 
-Recommended dev dependency:
+Recommended dev dependencies:
 
 ```text
 pytest>=8
+tomli>=2; python_version < "3.11"
 ```
 
 Do not require contributors to install the private development repo.
