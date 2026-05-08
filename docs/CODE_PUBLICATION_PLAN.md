@@ -56,6 +56,7 @@ Recommended steps:
 Current preflight companions:
 
 - [Public Import Map](IMPORT_MAP.md)
+- [Package And Install Plan](PACKAGE_INSTALL_PLAN.md)
 - [Smoke Test Plan](SMOKE_TEST_PLAN.md)
 - [First 5 Minutes](FIRST_5_MINUTES.md)
 

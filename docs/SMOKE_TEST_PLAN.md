@@ -1,6 +1,6 @@
 # Smoke Test Plan
 
-> Status: planned verification. These tests become executable after the public package skeleton exists.
+> Status: planned verification. These tests become executable after the public package skeleton exists. See [Package And Install Plan](PACKAGE_INSTALL_PLAN.md) for the packaging target.
 
 AuditME `v0.1.0-alpha` should not ship because the docs sound good. It should ship because a clean install and first-run path work in a fresh repo.
 

@@ -136,6 +136,7 @@ See:
 - [Architecture Direction](docs/ARCHITECTURE.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Code Publication Plan](docs/CODE_PUBLICATION_PLAN.md)
+- [Package And Install Plan](docs/PACKAGE_INSTALL_PLAN.md)
 - [Public Import Map](docs/IMPORT_MAP.md)
 - [Smoke Test Plan](docs/SMOKE_TEST_PLAN.md)
 

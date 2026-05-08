@@ -131,4 +131,4 @@ docs/
 
 ## Release Gate
 
-No code import should happen until this map, the smoke-test plan, and the beginner guide are reviewed together.
+No code import should happen until this map, the package/install plan, the smoke-test plan, and the beginner guide are reviewed together.
