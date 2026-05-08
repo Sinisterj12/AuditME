@@ -67,7 +67,7 @@ Recommended baseline:
 
 ```toml
 [build-system]
-requires = ["setuptools>=69", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -91,7 +91,8 @@ where = ["src"]
 
 [project.optional-dependencies]
 dev = [
-  "pytest>=8"
+  "pytest>=8",
+  "tomli>=2; python_version < '3.11'"
 ]
 ```
 
@@ -188,10 +189,11 @@ uv run auditme --help
 uv run pytest
 ```
 
-Recommended dev dependency:
+Recommended dev dependencies:
 
 ```text
 pytest>=8
+tomli>=2; python_version < "3.11"
 ```
 
 Do not require contributors to install the private development repo.

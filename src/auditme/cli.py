@@ -1,3 +1,5 @@
+"""Command-line entrypoint for the public AuditME package skeleton."""
+
 from __future__ import annotations
 
 import argparse
@@ -10,7 +12,21 @@ from . import __version__
 PUBLIC_ALPHA_COMMANDS = ("init", "resume", "verify", "handoff")
 
 
+def _exit_code_from_system_exit(error: SystemExit) -> int:
+    """Return a stable integer exit code from argparse's SystemExit."""
+    code = error.code
+    if code is None:
+        return 0
+    if isinstance(code, int):
+        return code
+    try:
+        return int(code)
+    except (TypeError, ValueError):
+        return 1
+
+
 def build_parser() -> argparse.ArgumentParser:
+    """Build the public alpha command parser."""
     parser = argparse.ArgumentParser(
         prog="auditme",
         description=(
@@ -46,11 +62,12 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    """Run the AuditME command-line interface."""
     parser = build_parser()
     try:
         args = parser.parse_args(argv)
     except SystemExit as error:
-        return int(error.code)
+        return _exit_code_from_system_exit(error)
 
     print(
         f"auditme {args.command} is reserved for v0.1.0-alpha behavior "
