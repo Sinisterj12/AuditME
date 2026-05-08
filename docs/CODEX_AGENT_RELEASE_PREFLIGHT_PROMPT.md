@@ -14,10 +14,10 @@ Your job is to prepare a clean public-release candidate for the new public repos
 Sinisterj12/AuditME
 ```
 
-The local public checkout is expected to be:
+If working locally, use the clean public checkout path supplied by the operator.
 
 ```text
-C:\Projects\AuditME
+<path-to-public-AuditME-checkout>
 ```
 
 ## Mission
@@ -43,7 +43,7 @@ Do not copy private generated `90_AUDITME` state from CodexSystem into the publi
 
 Do not publish personal local paths as required runtime behavior.
 
-Do not assume `C:\Projects\CodexSystem` exists for public users.
+Do not assume the private development checkout exists for public users.
 
 Do not add secrets, tokens, credentials, customer data, private repo memory, or private work notes.
 

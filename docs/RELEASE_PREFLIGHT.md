@@ -8,7 +8,7 @@ Create a clean, installable, public AuditME package that can be adopted by other
 
 ## Do not publish yet if any of this is true
 
-- The code assumes `C:\Projects\CodexSystem` or any personal local path.
+- The code assumes a private development checkout or any personal local path.
 - Generated memory files contain private repo-specific context.
 - Commands require private Google Drive, private GitHub state, or local-only files.
 - The install process requires cloning CodexSystem.

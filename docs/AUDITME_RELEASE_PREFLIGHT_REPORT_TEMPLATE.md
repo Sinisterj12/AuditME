@@ -9,7 +9,7 @@ This is a repo-switch operation.
 The active target repo is:
 
 ```text
-C:\Projects\AuditME
+<path-to-public-AuditME-checkout>
 ```
 
 The public GitHub repo is:
@@ -98,7 +98,7 @@ Mark each item `PASS`, `FAIL`, or `NEEDS REVIEW`.
 | Private generated `90_AUDITME` runtime state from CodexSystem is not copied |  |  |
 | Private task queues are not copied |  |  |
 | Private decision ledgers are not copied |  |  |
-| Personal local paths such as `C:\Projects\CodexSystem` are not required public behavior |  |  |
+| Personal local paths from the private development machine are not required public behavior |  |  |
 | Sync notes / private operator notes are not copied |  |  |
 | Secret-bearing state is not copied |  |  |
 | Customer data or work data is not copied |  |  |
@@ -250,9 +250,10 @@ Template:
 
 ```powershell
 # Fresh clone
-cd C:\Projects
+mkdir auditme-smoke
+cd auditme-smoke
 git clone https://github.com/Sinisterj12/AuditME.git AuditME-smoke
-cd C:\Projects\AuditME-smoke
+cd AuditME-smoke
 
 # Install
 uv sync

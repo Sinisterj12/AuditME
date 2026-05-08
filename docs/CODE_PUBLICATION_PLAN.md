@@ -44,7 +44,7 @@ Use a clean copy/import, not a full git history transfer.
 Recommended steps:
 
 1. Identify the minimal package files required for public v0.1.0-alpha.
-2. Copy only those files into a clean local `C:\Projects\AuditME` checkout.
+2. Copy only those files into a clean local checkout of the public repo.
 3. Rename or normalize package/module references if needed.
 4. Remove private paths and internal repo assumptions.
 5. Add public tests.
