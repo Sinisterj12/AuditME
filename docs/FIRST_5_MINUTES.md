@@ -50,6 +50,8 @@ Expected result:
   auditme.config.json
 ```
 
+These are fresh public-safe artifacts created in the target repo, never copied from private history or runtime state.
+
 AuditME should create predictable files in one predictable folder. It should not scan your life, phone a private workflow, or silently rewrite unrelated project files.
 
 ## What `auditme resume` Should Do

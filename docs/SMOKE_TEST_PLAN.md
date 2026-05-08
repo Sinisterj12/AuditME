@@ -29,7 +29,6 @@ cd auditme-smoke-project
 git init
 echo "# Smoke Project" > README.md
 git add README.md
-git commit -m "initial smoke project"
 ```
 
 The smoke project must not contain copied private generated files.
