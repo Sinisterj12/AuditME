@@ -130,11 +130,14 @@ This repo currently contains launch scaffolding only. The production code will b
 
 See:
 
+- [First 5 Minutes](docs/FIRST_5_MINUTES.md)
 - [Release Preflight](docs/RELEASE_PREFLIGHT.md)
 - [Adopter Guide](docs/ADOPTER_GUIDE.md)
 - [Architecture Direction](docs/ARCHITECTURE.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Code Publication Plan](docs/CODE_PUBLICATION_PLAN.md)
+- [Public Import Map](docs/IMPORT_MAP.md)
+- [Smoke Test Plan](docs/SMOKE_TEST_PLAN.md)
 
 ## License
 
