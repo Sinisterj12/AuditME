@@ -44,7 +44,7 @@ Use a clean copy/import, not a full git history transfer.
 Recommended steps:
 
 1. Identify the minimal package files required for public v0.1.0-alpha.
-2. Copy only those files into a clean local `C:\Projects\AuditME` checkout.
+2. Copy only those files into a clean local checkout of the public repo.
 3. Rename or normalize package/module references if needed.
 4. Remove private paths and internal repo assumptions.
 5. Add public tests.
@@ -52,6 +52,12 @@ Recommended steps:
 7. Commit to a feature branch in the public repo.
 8. Open a pull request into `main`.
 9. Merge only after release preflight passes.
+
+Current preflight companions:
+
+- [Public Import Map](IMPORT_MAP.md)
+- [Smoke Test Plan](SMOKE_TEST_PLAN.md)
+- [First 5 Minutes](FIRST_5_MINUTES.md)
 
 ## First code import scope
 
