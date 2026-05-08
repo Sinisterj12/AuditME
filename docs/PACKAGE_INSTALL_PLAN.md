@@ -89,7 +89,7 @@ auditme = "auditme.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
-[dependency-groups]
+[project.optional-dependencies]
 dev = [
   "pytest>=8"
 ]
@@ -271,7 +271,7 @@ Block alpha if:
 - package metadata promises commands that do not exist
 - generated files include private state
 - commands require a private development checkout
-- tests require one local machine path
+- tests rely on machine-specific filesystem paths
 - README claims the package is installable before install smoke passes
 
 ## Next Safest Action
