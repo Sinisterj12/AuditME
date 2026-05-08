@@ -1,6 +1,6 @@
 # Package And Install Plan
 
-> Status: release-preflight plan. No package source has been imported yet.
+> Status: release-preflight plan. No private engine code has been imported yet.
 
 This plan defines the public packaging target for AuditME `v0.1.0-alpha`.
 
@@ -76,7 +76,7 @@ version = "0.1.0a0"
 description = "Repo-native memory, guardrails, handoff state, and verification receipts for AI-assisted development."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "LicenseRef-Pending" }
+license = "LicenseRef-Pending"
 authors = [
   { name = "AuditME contributors" }
 ]

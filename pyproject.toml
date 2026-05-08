@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auditme"
+version = "0.1.0a0"
+description = "Repo-native memory, guardrails, handoff state, and verification receipts for AI-assisted development."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "LicenseRef-Pending"
+authors = [
+  { name = "AuditME contributors" }
+]
+keywords = ["ai", "agents", "cli", "developer-tools", "verification"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Sinisterj12/AuditME"
+Repository = "https://github.com/Sinisterj12/AuditME.git"
+Issues = "https://github.com/Sinisterj12/AuditME/issues"
+
+[project.scripts]
+auditme = "auditme.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

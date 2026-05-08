@@ -75,11 +75,12 @@ The goal is simple: a developer, builder, or AI agent should be able to enter a 
 
 ## Current status
 
-This repository is not yet the installable release.
+This repository is not yet the functional alpha release.
 
 Current phase:
 
 - Public repo scaffold created
+- Minimal package skeleton in progress
 - Launch documentation prepared
 - Engine code pending release preflight
 - Internal/private paths being removed
@@ -126,7 +127,7 @@ AuditME should be:
 
 ## Repository state
 
-This repo currently contains launch scaffolding only. The production code will be added after release preflight passes.
+This repo currently contains launch documentation and the first package skeleton. The public engine behavior will be added only after release preflight passes.
 
 See:
 
