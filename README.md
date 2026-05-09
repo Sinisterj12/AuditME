@@ -82,8 +82,9 @@ Current phase:
 - Public repo scaffold created
 - Minimal package skeleton merged
 - `auditme init` behavior implemented in a focused slice
+- `auditme resume` behavior implemented in a focused slice
 - Launch documentation prepared
-- Remaining engine behavior pending release preflight
+- `auditme verify` and `auditme handoff` behavior pending focused release preflight
 - Internal/private paths being removed
 - Packaging and install flow being finalized
 - Security and adopter guidance being written
@@ -128,7 +129,7 @@ AuditME should be:
 
 ## Repository state
 
-This repo currently contains launch documentation, the first package skeleton, and the first `auditme init` behavior slice. Remaining public engine behavior will be added only after focused release-preflight review.
+This repo currently contains launch documentation, the first package skeleton, and focused `auditme init` and `auditme resume` behavior slices. Remaining public engine behavior will be added only after focused release-preflight review.
 
 See:
 

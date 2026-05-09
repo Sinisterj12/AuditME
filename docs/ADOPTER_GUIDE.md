@@ -55,13 +55,13 @@ After initialization, a user should be able to answer:
 
 ## Recommended first setup
 
-Public users should start with balanced mode:
+Public users should start with the plain init path:
 
 ```bash
-auditme init --project . --mode balanced
+auditme init --project .
 ```
 
-Suggested modes:
+Suggested future modes:
 
 - `advisory`: report issues, do not block
 - `balanced`: block dangerous drift, warn on style issues
