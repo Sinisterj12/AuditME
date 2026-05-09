@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import pytest
@@ -15,6 +16,13 @@ EXPECTED_INIT_FILES = {
     "AUDITME_VERIFICATION_RECEIPTS.md",
     "auditme.config.json",
 }
+
+
+def _make_symlink(source: Path, destination: Path, *, target_is_directory: bool) -> None:
+    try:
+        os.symlink(source, destination, target_is_directory=target_is_directory)
+    except (OSError, NotImplementedError) as error:
+        pytest.skip(f"symlinks unavailable in this test environment: {error}")
 
 
 def test_init_creates_public_safe_auditme_folder(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
@@ -100,3 +108,39 @@ def test_init_reports_clear_error_when_project_path_is_file(
     assert exit_code == 2
     assert "Could not initialize AuditME" in output.err
     assert not (tmp_path / "90_AUDITME").exists()
+
+
+def test_init_refuses_existing_auditme_directory_symlink(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    project = tmp_path / "project"
+    project.mkdir()
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    _make_symlink(outside, project / "90_AUDITME", target_is_directory=True)
+
+    exit_code = main(["init", "--project", str(project)])
+    output = capsys.readouterr()
+
+    assert exit_code == 2
+    assert "Refusing to write through symlink" in output.err
+    assert not (outside / "auditme.config.json").exists()
+
+
+def test_init_refuses_existing_generated_file_symlink(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    project = tmp_path / "project"
+    project.mkdir()
+    auditme_dir = project / "90_AUDITME"
+    auditme_dir.mkdir()
+    outside_config = tmp_path / "outside-config.json"
+    _make_symlink(outside_config, auditme_dir / "auditme.config.json", target_is_directory=False)
+
+    exit_code = main(["init", "--project", str(project)])
+    output = capsys.readouterr()
+
+    assert exit_code == 2
+    assert "Refusing to write through symlink" in output.err
+    assert not outside_config.exists()
+    assert {path.name for path in auditme_dir.iterdir()} == {"auditme.config.json"}

@@ -81,7 +81,7 @@ Current phase:
 
 - Public repo scaffold created
 - Minimal package skeleton merged
-- `auditme init` behavior being implemented in a focused slice
+- `auditme init` behavior implemented in a focused slice
 - Launch documentation prepared
 - Remaining engine behavior pending release preflight
 - Internal/private paths being removed
