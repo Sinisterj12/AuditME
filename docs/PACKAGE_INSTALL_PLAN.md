@@ -262,7 +262,7 @@ The first code PR was package skeleton only:
 - basic `auditme --help`
 - first CLI help test
 
-The next code slice is `auditme init` only. No generated `90_AUDITME/` folder should be committed. The folder should only be created inside throwaway test projects or explicit user target projects.
+The current behavior slices are `auditme init` and `auditme resume`. No generated `90_AUDITME/` folder should be committed. The folder should only be created inside throwaway test projects or explicit user target projects.
 
 ## Release Blockers
 
@@ -278,4 +278,4 @@ Block alpha if:
 
 ## Next Safest Action
 
-Implement one command at a time behind tests. Finish `auditme init` before importing or rewriting `resume`, `verify`, or `handoff` behavior.
+Implement one command at a time behind tests. After `auditme resume`, the next behavior slice should be `auditme verify` unless release review finds a blocker.

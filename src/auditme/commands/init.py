@@ -70,7 +70,7 @@ def _default_config(project_path: Path) -> dict[str, object]:
         "project": {"name": project_path.name},
         "commands": {
             "init": {"status": "initialized"},
-            "resume": {"status": "not_implemented"},
+            "resume": {"status": "available"},
             "verify": {"status": "not_implemented"},
             "handoff": {"status": "not_implemented"},
         },

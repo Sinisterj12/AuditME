@@ -1,6 +1,6 @@
 # AuditME First 5 Minutes
 
-> Status: public alpha guide in progress. The commands below describe the intended `v0.1.0-alpha` experience and must be verified before release.
+> Status: public alpha guide in progress. `auditme init` and `auditme resume` are implemented in focused slices; `verify` and `handoff` remain planned until their own slices land.
 
 This is the plain-English path for a first-time user.
 
@@ -20,7 +20,7 @@ What should the next session do?
 
 You add AuditME to a repo, let it create a small repo-local memory folder, then use that folder to keep AI sessions grounded.
 
-Planned first run:
+Target first run:
 
 ```bash
 auditme init --project .
@@ -33,7 +33,7 @@ If that feels too simple, good. The alpha should be boring on purpose.
 
 ## What `auditme init` Should Do
 
-Planned command:
+Implemented command:
 
 ```bash
 auditme init --project .
@@ -56,7 +56,7 @@ AuditME should create predictable files in one predictable folder. It should not
 
 ## What `auditme resume` Should Do
 
-Planned command:
+Implemented command:
 
 ```bash
 auditme resume --project .
@@ -70,6 +70,7 @@ Expected result:
 - allowed write scope
 - stop conditions
 - recent verification state
+- a clear error if AuditME has not been initialized yet
 
 This is the text you give to a fresh coding agent so it starts with repo truth instead of guessing from chat crumbs.
 
