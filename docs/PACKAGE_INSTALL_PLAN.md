@@ -251,9 +251,9 @@ Before copying or extracting private implementation code, classify each candidat
 
 If a module requires private state, private paths, sync/relay files, desktop UI, or broad internal commands, rewrite it clean or defer it.
 
-## First Code Lane After This Plan
+## Completed Code Lanes
 
-The first code PR should be package skeleton only:
+The first code PR was package skeleton only:
 
 - `pyproject.toml`
 - `src/auditme/__init__.py`
@@ -262,7 +262,7 @@ The first code PR should be package skeleton only:
 - basic `auditme --help`
 - first CLI help test
 
-No generated `90_AUDITME/` folder should be committed. The folder should only be created inside throwaway test projects when the `init` command exists.
+The next code slice is `auditme init` only. No generated `90_AUDITME/` folder should be committed. The folder should only be created inside throwaway test projects or explicit user target projects.
 
 ## Release Blockers
 
@@ -278,4 +278,4 @@ Block alpha if:
 
 ## Next Safest Action
 
-After this plan is reviewed, create a package-skeleton branch. Keep it boring: metadata, console script, help output, and tests before any state-writing command.
+Implement one command at a time behind tests. Finish `auditme init` before importing or rewriting `resume`, `verify`, or `handoff` behavior.

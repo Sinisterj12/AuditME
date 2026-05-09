@@ -80,9 +80,10 @@ This repository is not yet the functional alpha release.
 Current phase:
 
 - Public repo scaffold created
-- Minimal package skeleton in progress
+- Minimal package skeleton merged
+- `auditme init` behavior implemented in a focused slice
 - Launch documentation prepared
-- Engine code pending release preflight
+- Remaining engine behavior pending release preflight
 - Internal/private paths being removed
 - Packaging and install flow being finalized
 - Security and adopter guidance being written
@@ -127,7 +128,7 @@ AuditME should be:
 
 ## Repository state
 
-This repo currently contains launch documentation and the first package skeleton. The public engine behavior will be added only after release preflight passes.
+This repo currently contains launch documentation, the first package skeleton, and the first `auditme init` behavior slice. Remaining public engine behavior will be added only after focused release-preflight review.
 
 See:
 

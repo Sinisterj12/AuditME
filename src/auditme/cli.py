@@ -7,6 +7,7 @@ import sys
 from collections.abc import Sequence
 
 from . import __version__
+from .commands.init import initialize_project
 
 
 PUBLIC_ALPHA_COMMANDS = ("init", "resume", "verify", "handoff")
@@ -41,10 +42,17 @@ def build_parser() -> argparse.ArgumentParser:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
+    command_help = {
+        "init": "Create public-safe AuditME artifacts in a target project.",
+        "resume": "Public alpha placeholder for auditme resume.",
+        "verify": "Public alpha placeholder for auditme verify.",
+        "handoff": "Public alpha placeholder for auditme handoff.",
+    }
+
     for command in PUBLIC_ALPHA_COMMANDS:
         subparser = subparsers.add_parser(
             command,
-            help=f"Public alpha placeholder for auditme {command}.",
+            help=command_help[command],
         )
         subparser.add_argument(
             "--project",
@@ -69,9 +77,18 @@ def main(argv: Sequence[str] | None = None) -> int:
     except SystemExit as error:
         return _exit_code_from_system_exit(error)
 
+    if args.command == "init":
+        try:
+            auditme_dir = initialize_project(args.project)
+        except OSError as error:
+            print(f"Could not initialize AuditME: {error}", file=sys.stderr)
+            return 2
+        print(f"Initialized AuditME at {auditme_dir}")
+        return 0
+
     print(
         f"auditme {args.command} is reserved for v0.1.0-alpha behavior "
-        "and is not implemented in this package skeleton.",
+        "and is not implemented yet.",
         file=sys.stderr,
     )
     return 2
