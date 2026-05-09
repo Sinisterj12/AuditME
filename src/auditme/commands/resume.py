@@ -10,6 +10,9 @@ from typing import Any
 from .init import AUDITME_DIR_NAME
 
 
+BRANCH_DETECTION_TIMEOUT_SECONDS = 2
+
+
 class ResumeError(OSError):
     """Raised when resume context cannot be loaded safely."""
 
@@ -31,11 +34,23 @@ def _detect_branch(project_path: Path) -> str:
             check=False,
             capture_output=True,
             text=True,
+            timeout=BRANCH_DETECTION_TIMEOUT_SECONDS,
         )
-    except OSError:
+    except (OSError, subprocess.TimeoutExpired):
         return "unknown"
     branch = result.stdout.strip()
     return branch if result.returncode == 0 and branch else "unknown"
+
+
+def _required_artifact_path(auditme_dir: Path, file_name: str) -> Path:
+    path = auditme_dir / file_name
+    if not path.is_file():
+        raise ResumeError(f"Missing AuditME artifact: {AUDITME_DIR_NAME}/{file_name}")
+    return path
+
+
+def _read_required_artifact(auditme_dir: Path, file_name: str) -> str:
+    return _required_artifact_path(auditme_dir, file_name).read_text(encoding="utf-8")
 
 
 def _extract_section(markdown: str, heading: str) -> str:
@@ -75,13 +90,13 @@ def render_resume(project: str | Path) -> str:
         raise ResumeError(f"Project path is not a directory: {project_path}")
 
     auditme_dir = project_path / AUDITME_DIR_NAME
-    config_path = auditme_dir / "auditme.config.json"
-    if not auditme_dir.is_dir() or not config_path.is_file():
+    if not auditme_dir.is_dir():
         raise ResumeError(
             f"AuditME is not initialized at {project_path}. "
             f"Run `auditme init --project {project_path}` first."
         )
 
+    config_path = _required_artifact_path(auditme_dir, "auditme.config.json")
     config = _load_json(config_path)
     project_config = config.get("project", {})
     project_name = (
@@ -90,10 +105,8 @@ def render_resume(project: str | Path) -> str:
         else project_path.name
     )
 
-    resume_text = (auditme_dir / "AUDITME_RESUME.md").read_text(encoding="utf-8")
-    receipt_text = (auditme_dir / "AUDITME_VERIFICATION_RECEIPTS.md").read_text(
-        encoding="utf-8"
-    )
+    resume_text = _read_required_artifact(auditme_dir, "AUDITME_RESUME.md")
+    receipt_text = _read_required_artifact(auditme_dir, "AUDITME_VERIFICATION_RECEIPTS.md")
 
     return "\n".join(
         [
