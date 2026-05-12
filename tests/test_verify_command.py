@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
@@ -113,3 +114,23 @@ def test_verify_reports_clear_error_for_corrupt_config(
     assert exit_code == 2
     assert "Could not verify AuditME" in output.err
     assert "Invalid AuditME config" in output.err
+
+
+def test_verify_reports_clear_error_for_invalid_mode(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    project = tmp_path / "invalid-mode"
+    project.mkdir()
+    assert main(["init", "--project", str(project)]) == 0
+    config_path = project / "90_AUDITME" / "auditme.config.json"
+    config = json.loads(config_path.read_text(encoding="utf-8"))
+    config["mode"] = "whatever"
+    config_path.write_text(json.dumps(config, indent=2) + "\n", encoding="utf-8")
+    capsys.readouterr()
+
+    exit_code = main(["verify", "--project", str(project)])
+    output = capsys.readouterr()
+
+    assert exit_code == 2
+    assert "Could not verify AuditME" in output.err
+    assert "mode must be advisory, balanced, or strict" in output.err

@@ -25,6 +25,14 @@ def test_package_version_matches_pyproject() -> None:
     assert auditme.__version__ == pyproject["project"]["version"]
 
 
+def test_package_license_matches_root_license() -> None:
+    pyproject = tomllib.loads((PROJECT_ROOT / "pyproject.toml").read_text(encoding="utf-8"))
+
+    assert pyproject["project"]["license"] == "MIT"
+    assert pyproject["project"]["license-files"] == ["LICENSE"]
+    assert (PROJECT_ROOT / "LICENSE").is_file()
+
+
 def test_top_level_help_lists_public_alpha_commands(capsys: pytest.CaptureFixture[str]) -> None:
     exit_code = main(["--help"])
     output = capsys.readouterr().out

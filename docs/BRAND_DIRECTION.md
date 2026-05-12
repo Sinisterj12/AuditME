@@ -52,7 +52,7 @@ Avoid:
 - vague enterprise language
 - fake launch claims
 - implying the alpha is already fully released
-- claiming handoff behavior is implemented before it lands
+- claiming commands or release artifacts before they land
 - making private CodexSystem behavior sound public
 
 ## Public Release Boundaries

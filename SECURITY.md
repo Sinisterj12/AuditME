@@ -4,9 +4,9 @@ AuditME is designed to manage repo-local memory and agent-facing context. That m
 
 ## Current status
 
-AuditME is in public launch-preflight mode. Production code has not yet been published in this repository.
+AuditME is in public alpha release-preflight mode. The public CLI command spine exists, but it is still pre-release software.
 
-Security review is required before the first installable release.
+Security review is required before a stable release.
 
 ## Main risks
 
@@ -56,9 +56,9 @@ Mitigation direction:
 
 Until a formal process is published, report suspected security issues by opening a private communication path with the repository owner rather than posting exploitable details publicly.
 
-## Pre-release security requirements
+## Alpha security requirements
 
-Before public code release:
+Before widening adoption beyond the first alpha:
 
 - Document trust boundaries.
 - Add config validation.

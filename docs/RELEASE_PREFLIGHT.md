@@ -16,6 +16,7 @@ Create a clean, installable, public AuditME package that can be adopted by other
 - The public README promises commands that do not work.
 - Verification receipts can be modified without clear trust boundaries.
 - No clean install test has been run from a fresh folder.
+- No license is present for public reuse.
 
 ## Required preflight checks
 
