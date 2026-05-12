@@ -6,7 +6,7 @@
 
 AuditME turns agent chaos into repo truth: durable project memory, scoped next moves, verification receipts, and session context that live with the code instead of disappearing into chat history.
 
-`v0.1.0-alpha` is in release-preflight. The public repo now has a clean Python package path plus focused `init`, `resume`, `verify`, and `handoff` behavior.
+`v0.1.0-alpha` is in final release-preflight. The public repo now has a clean Python package path plus focused `init`, `resume`, `verify`, and `handoff` behavior.
 
 `public alpha prep` | `CLI-first` | `repo-local memory` | `honest verification`
 
@@ -48,8 +48,8 @@ Implemented now:
 
 Still pending:
 
-- license decision before real public release
 - final alpha release checklist
+- release tag and publication decision
 
 ## What It Is
 
@@ -97,7 +97,7 @@ Current state:
 - `auditme init`, `auditme resume`, `auditme verify`, and `auditme handoff` are implemented in focused slices.
 - Package build path is in place.
 - Private CodexSystem engine code and generated private runtime state are not imported.
-- License decision is still pending.
+- MIT license is in place.
 
 ## Who It Is For
 
@@ -137,4 +137,4 @@ Release and implementation planning:
 
 ## License
 
-License decision is pending before code publication. No reuse rights are granted until a license is added.
+AuditME is released under the [MIT License](LICENSE).

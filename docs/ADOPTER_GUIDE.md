@@ -35,7 +35,7 @@ Expected generated structure:
   auditme.config.json
 ```
 
-The exact filenames may change before release, but the public contract should stay simple:
+The first alpha uses this simple generated structure:
 
 - Resume tells the next agent where to start.
 - Task queue tells the next agent what is approved.
@@ -66,6 +66,8 @@ Suggested future modes:
 - `advisory`: report issues, do not block
 - `balanced`: block dangerous drift, warn on style issues
 - `strict`: enforce stronger proof and guardrail rules
+
+The first alpha writes `mode: advisory` by default and validates the known mode names. Deeper mode behavior can mature after the core command path is proven.
 
 ## Agent handoff pattern
 

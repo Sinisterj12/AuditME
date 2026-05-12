@@ -4,7 +4,7 @@ This roadmap is intentionally conservative. AuditME should become public by gett
 
 ## Phase 0: Public scaffold
 
-Status: in progress
+Status: complete
 
 Goals:
 
@@ -15,7 +15,7 @@ Goals:
 - Add architecture direction
 - Add roadmap
 - Add security notes
-- Do not publish engine code yet
+- Do not publish private engine code or private runtime state
 
 Success standard:
 

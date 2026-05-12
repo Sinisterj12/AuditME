@@ -1,6 +1,6 @@
 # Public Import Map
 
-> Status: draft release-preflight map. No private engine code has been imported into this public repo; public `init`, `resume`, `verify`, and `handoff` behavior are being rewritten clean in focused slices.
+> Status: release-preflight map. No private engine code has been imported into this public repo; public `init`, `resume`, `verify`, and `handoff` behavior has been rewritten clean in focused slices.
 
 This document controls what may move from the private implementation into the public AuditME alpha.
 
@@ -107,10 +107,6 @@ src/
     __init__.py
     __main__.py
     cli.py
-    project.py
-    config.py
-    artifacts.py
-    verify.py
     commands/
       __init__.py
       init.py
@@ -131,4 +127,4 @@ docs/
 
 ## Release Gate
 
-No code import should happen until this map, the package/install plan, the smoke-test plan, and the beginner guide are reviewed together.
+The original alpha import gate has been satisfied by clean rewrites rather than a private code dump. Any future private-reference import still requires this map, the package/install plan, the smoke-test plan, and the beginner guide to be reviewed together.

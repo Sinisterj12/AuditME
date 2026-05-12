@@ -1,4 +1,4 @@
-"""Command-line entrypoint for the public AuditME package skeleton."""
+"""Command-line entrypoint for the public AuditME package."""
 
 from __future__ import annotations
 
@@ -114,8 +114,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 0
 
     print(
-        f"auditme {args.command} is reserved for v0.1.0-alpha behavior "
-        "and is not implemented yet.",
+        f"Unknown AuditME command: {args.command}",
         file=sys.stderr,
     )
     return 2

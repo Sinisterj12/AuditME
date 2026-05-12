@@ -67,6 +67,7 @@ def _default_config(project_path: Path) -> dict[str, object]:
     return {
         "schema_version": 1,
         "auditme_dir": AUDITME_DIR_NAME,
+        "mode": "advisory",
         "project": {"name": project_path.name},
         "commands": {
             "init": {"status": "initialized"},

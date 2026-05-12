@@ -42,6 +42,7 @@ def test_init_creates_public_safe_auditme_folder(tmp_path: Path, capsys: pytest.
     assert config == {
         "schema_version": 1,
         "auditme_dir": "90_AUDITME",
+        "mode": "advisory",
         "project": {"name": "fresh-project"},
         "commands": {
             "init": {"status": "initialized"},

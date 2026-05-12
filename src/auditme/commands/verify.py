@@ -47,6 +47,11 @@ def _validate_config(config: dict[str, Any]) -> None:
         raise VerifyError("Invalid AuditME config: schema_version must be 1")
     if config.get("auditme_dir") != AUDITME_DIR_NAME:
         raise VerifyError(f"Invalid AuditME config: auditme_dir must be {AUDITME_DIR_NAME}")
+    mode = config.get("mode")
+    if mode not in {"advisory", "balanced", "strict"}:
+        raise VerifyError(
+            "Invalid AuditME config: mode must be advisory, balanced, or strict"
+        )
     project = config.get("project")
     if not isinstance(project, dict):
         raise VerifyError("Invalid AuditME config: project must be an object")

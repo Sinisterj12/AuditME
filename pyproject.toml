@@ -8,7 +8,8 @@ version = "0.1.0a0"
 description = "Repo-native memory, guardrails, handoff state, and verification receipts for AI-assisted development."
 readme = "README.md"
 requires-python = ">=3.10"
-license = "LicenseRef-Pending"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
   { name = "AuditME contributors" }
 ]

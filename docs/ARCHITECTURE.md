@@ -16,7 +16,7 @@ It records project truth, agent handoff state, approved work, guardrail policy, 
 
 The CLI is the primary public interface.
 
-Target command family:
+Eventual command family:
 
 ```bash
 auditme init
@@ -25,6 +25,8 @@ auditme verify
 auditme handoff
 auditme status
 ```
+
+`v0.1.0-alpha` exposes only `init`, `resume`, `verify`, and `handoff`; `status` is a future candidate, not part of the first alpha.
 
 The CLI should be stable before the desktop layer is considered public-critical.
 

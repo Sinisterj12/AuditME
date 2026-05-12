@@ -1,6 +1,6 @@
 # Package And Install Plan
 
-> Status: release-preflight plan. No private engine code has been imported yet.
+> Status: release-preflight plan. The public alpha command spine has been rewritten clean in focused slices; no private engine code or private runtime state has been imported.
 
 This plan defines the public packaging target for AuditME `v0.1.0-alpha`.
 
@@ -41,10 +41,6 @@ src/
     __init__.py
     __main__.py
     cli.py
-    project.py
-    config.py
-    artifacts.py
-    verify.py
     commands/
       __init__.py
       init.py
@@ -76,7 +72,8 @@ version = "0.1.0a0"
 description = "Repo-native memory, guardrails, handoff state, and verification receipts for AI-assisted development."
 readme = "README.md"
 requires-python = ">=3.10"
-license = "LicenseRef-Pending"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
   { name = "AuditME contributors" }
 ]
@@ -100,7 +97,7 @@ Notes:
 
 - `version = "0.1.0a0"` keeps the Python package version aligned with an alpha release without pretending it is stable.
 - Runtime dependencies should stay empty for the first alpha unless a dependency removes real risk.
-- The license field must be updated before publishing reuse rights.
+- The package license must stay aligned with the root `LICENSE` file before release.
 
 ## Python Version
 
@@ -263,7 +260,7 @@ The first code PR was package skeleton only:
 - basic `auditme --help`
 - first CLI help test
 
-The current behavior slices are `auditme init`, `auditme resume`, `auditme verify`, and `auditme handoff`. No generated `90_AUDITME/` folder should be committed. The folder should only be created inside throwaway test projects or explicit user target projects.
+The current behavior slices are `auditme init`, `auditme resume`, `auditme verify`, and `auditme handoff`. The generated config includes a small validated mode field: `advisory`, `balanced`, or `strict`; the first alpha treats missing proof as advisory unless required state is broken. No generated `90_AUDITME/` folder should be committed. The folder should only be created inside throwaway test projects or explicit user target projects.
 
 ## Release Blockers
 
@@ -279,4 +276,4 @@ Block alpha if:
 
 ## Next Safest Action
 
-Run the full release-preflight pass: clean install smoke, package build, README/docs truth check, license decision, and release checklist closure before any official public release.
+Run the full release-preflight pass: clean install smoke, package build, README/docs truth check, and release checklist closure before any official public release.
