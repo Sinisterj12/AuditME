@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import os
+import uuid
 from pathlib import Path
 from typing import Any
 
@@ -74,6 +76,19 @@ def _replace_section(markdown: str, heading: str, body: str) -> str:
     return "\n".join([*lines[: start + 1], *replacement, *lines[end:]]).rstrip() + "\n"
 
 
+def _atomic_write_text(path: Path, text: str) -> None:
+    temp_path = path.with_name(f".{path.name}.{uuid.uuid4().hex}.tmp")
+    try:
+        with temp_path.open("xb") as file:
+            file.write(text.encode("utf-8"))
+            file.flush()
+            os.fsync(file.fileno())
+        os.replace(temp_path, path)
+    except OSError:
+        temp_path.unlink(missing_ok=True)
+        raise
+
+
 def render_handoff(project: str | Path, next_move: str | None) -> str:
     """Record and return a public-safe handoff summary for a project."""
     project_path = Path(project).expanduser().resolve()
@@ -102,7 +117,7 @@ def render_handoff(project: str | Path, next_move: str | None) -> str:
         "Handoff",
         f"Next move: {normalized_next_move}",
     )
-    resume_path.write_text(updated_resume, encoding="utf-8")
+    _atomic_write_text(resume_path, updated_resume)
 
     return "\n".join(
         [
