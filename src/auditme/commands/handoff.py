@@ -23,10 +23,10 @@ def _is_within(path: Path, parent: Path) -> bool:
 
 def _required_artifact_path(auditme_dir: Path, file_name: str, project_path: Path) -> Path:
     path = auditme_dir / file_name
-    if not path.is_file():
-        raise HandoffError(f"Missing AuditME artifact: {AUDITME_DIR_NAME}/{file_name}")
     if path.is_symlink():
         raise HandoffError(f"Refusing to write through symlink: {path}")
+    if not path.is_file():
+        raise HandoffError(f"Missing AuditME artifact: {AUDITME_DIR_NAME}/{file_name}")
     if not _is_within(path.resolve(), project_path):
         raise HandoffError(f"Refusing to write outside project: {path}")
     return path
@@ -114,4 +114,3 @@ def render_handoff(project: str | Path, next_move: str | None) -> str:
             "",
         ]
     )
-
