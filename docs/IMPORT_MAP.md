@@ -1,6 +1,6 @@
 # Public Import Map
 
-> Status: draft release-preflight map. No private engine code has been imported into this public repo; public `init` and `resume` behavior are being rewritten clean in focused slices.
+> Status: draft release-preflight map. No private engine code has been imported into this public repo; public `init`, `resume`, and `verify` behavior are being rewritten clean in focused slices.
 
 This document controls what may move from the private implementation into the public AuditME alpha.
 

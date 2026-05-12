@@ -228,7 +228,8 @@ Expected:
 - console script works outside the source tree
 - generated files appear only under the target repo
 - no private paths appear in generated output
-- `verify` distinguishes `pass`, `warn`, and `fail`
+- `verify` distinguishes `pass`, advisory `warn`, and blocking `fail`
+- `verify` warning output is non-blocking in the first alpha; strict CI behavior can come later as an explicit mode
 
 ## Code Import Gate
 
@@ -262,7 +263,7 @@ The first code PR was package skeleton only:
 - basic `auditme --help`
 - first CLI help test
 
-The current behavior slices are `auditme init` and `auditme resume`. No generated `90_AUDITME/` folder should be committed. The folder should only be created inside throwaway test projects or explicit user target projects.
+The current behavior slices are `auditme init`, `auditme resume`, and `auditme verify`. No generated `90_AUDITME/` folder should be committed. The folder should only be created inside throwaway test projects or explicit user target projects.
 
 ## Release Blockers
 
@@ -278,4 +279,4 @@ Block alpha if:
 
 ## Next Safest Action
 
-Implement one command at a time behind tests. After `auditme resume`, the next behavior slice should be `auditme verify` unless release review finds a blocker.
+Implement one command at a time behind tests. After `auditme verify`, the next behavior slice should be `auditme handoff` unless release review finds a blocker or James prioritizes a separate docs/assets branding lane first.

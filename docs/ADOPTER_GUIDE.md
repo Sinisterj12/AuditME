@@ -100,6 +100,8 @@ AuditME should report:
 - warning-only items
 - suggested next safe action
 
+For the first public alpha, warnings are advisory: `auditme verify` can return success while still printing `Status: warn` when proof is missing. Treat that as "not ready to claim done," not as a broken install.
+
 ## Handoff pattern
 
 After a completed task:

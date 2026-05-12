@@ -1,6 +1,6 @@
 # AuditME First 5 Minutes
 
-> Status: public alpha guide in progress. `auditme init` and `auditme resume` are implemented in focused slices; `verify` and `handoff` remain planned until their own slices land.
+> Status: public alpha guide in progress. `auditme init`, `auditme resume`, and `auditme verify` are implemented in focused slices; `handoff` remains planned until its own slice lands.
 
 This is the plain-English path for a first-time user.
 
@@ -76,7 +76,7 @@ This is the text you give to a fresh coding agent so it starts with repo truth i
 
 ## What `auditme verify` Should Do
 
-Planned command:
+Implemented command:
 
 ```bash
 auditme verify --project .
@@ -88,6 +88,8 @@ Expected result:
 - `warn` for missing or weak proof
 - `fail` for broken required checks
 - clear next action
+
+In the public alpha, `warn` is intentionally non-blocking and exits successfully. Broken required state, invalid config, or a missing project path exits with an error.
 
 AuditME should never turn "I feel like it worked" into a green checkmark.
 

@@ -83,8 +83,9 @@ Current phase:
 - Minimal package skeleton merged
 - `auditme init` behavior implemented in a focused slice
 - `auditme resume` behavior implemented in a focused slice
+- `auditme verify` behavior implemented in a focused slice
 - Launch documentation prepared
-- `auditme verify` and `auditme handoff` behavior pending focused release preflight
+- `auditme handoff` behavior pending focused release preflight
 - Internal/private paths being removed
 - Packaging and install flow being finalized
 - Security and adopter guidance being written

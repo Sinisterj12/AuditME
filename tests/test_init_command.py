@@ -46,7 +46,7 @@ def test_init_creates_public_safe_auditme_folder(tmp_path: Path, capsys: pytest.
         "commands": {
             "init": {"status": "initialized"},
             "resume": {"status": "available"},
-            "verify": {"status": "not_implemented"},
+            "verify": {"status": "available"},
             "handoff": {"status": "not_implemented"},
         },
     }

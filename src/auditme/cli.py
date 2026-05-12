@@ -9,6 +9,7 @@ from collections.abc import Sequence
 from . import __version__
 from .commands.init import initialize_project
 from .commands.resume import render_resume
+from .commands.verify import render_verify
 
 
 PUBLIC_ALPHA_COMMANDS = ("init", "resume", "verify", "handoff")
@@ -46,7 +47,7 @@ def build_parser() -> argparse.ArgumentParser:
     command_help = {
         "init": "Create public-safe AuditME artifacts in a target project.",
         "resume": "Print copyable AuditME context for a target project.",
-        "verify": "Public alpha placeholder for auditme verify.",
+        "verify": "Report honest AuditME pass/warn/fail status for a target project.",
         "handoff": "Public alpha placeholder for auditme handoff.",
     }
 
@@ -92,6 +93,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(render_resume(args.project), end="")
         except OSError as error:
             print(f"Could not resume AuditME: {error}", file=sys.stderr)
+            return 2
+        return 0
+
+    if args.command == "verify":
+        try:
+            print(render_verify(args.project), end="")
+        except OSError as error:
+            print(f"Could not verify AuditME: {error}", file=sys.stderr)
             return 2
         return 0
 

@@ -1,6 +1,6 @@
 # Smoke Test Plan
 
-> Status: staged verification. Package/help, `init`, and `resume` smoke checks are executable; `verify` and `handoff` remain planned until their focused behavior slices land. See [Package And Install Plan](PACKAGE_INSTALL_PLAN.md) for the packaging target.
+> Status: staged verification. Package/help, `init`, `resume`, and `verify` smoke checks are executable; `handoff` remains planned until its focused behavior slice lands. See [Package And Install Plan](PACKAGE_INSTALL_PLAN.md) for the packaging target.
 
 AuditME `v0.1.0-alpha` should not ship because the docs sound good. It should ship because a clean install and first-run path work in a fresh repo.
 
@@ -52,6 +52,7 @@ Expected:
 - init creates only expected files
 - resume output is useful and honest
 - verify reports pass/warn/fail clearly
+- verify may exit 0 with `Status: warn` when proof is missing, because warnings are advisory in the first alpha
 - handoff records the next move without touching unrelated files
 
 ## Package Install Smoke
@@ -109,7 +110,7 @@ auditme handoff --project . --next-move ""
 Expected:
 
 - errors are clear
-- exits are honest
+- exits are honest: invalid targets or broken required state return nonzero, while advisory verification warnings remain successful with `Status: warn`
 - no partial state is created on invalid input
 
 ## Release Blockers
