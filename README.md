@@ -8,7 +8,7 @@ AuditME turns agent chaos into repo truth: durable project memory, scoped next m
 
 `v0.1.0-alpha` is in release-preflight. The public repo now has a clean Python package path plus focused `init`, `resume`, and `verify` behavior. `handoff` is still planned and will land in its own reviewed slice.
 
-`public alpha prep` · `CLI-first` · `repo-local memory` · `honest verification`
+`public alpha prep` | `CLI-first` | `repo-local memory` | `honest verification`
 
 ## Why It Exists
 
@@ -36,6 +36,11 @@ The public alpha is intentionally small:
 auditme init --project .
 auditme resume --project .
 auditme verify --project .
+```
+
+Planned next:
+
+```bash
 auditme handoff --project . --next-move "Describe the next safe task"
 ```
 
@@ -45,7 +50,7 @@ Implemented now:
 - `auditme resume --project .`
 - `auditme verify --project .`
 
-Planned next:
+Still pending:
 
 - `auditme handoff --project . --next-move "..."`
 - license decision before real public release

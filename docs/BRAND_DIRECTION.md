@@ -61,7 +61,7 @@ Brand polish must stay public-safe:
 
 - no private relay content
 - no private CodexSystem paths
-- no generated `90_AUDITME` runtime state
+- no committed or generated `90_AUDITME` runtime state artifacts in docs/assets lanes
 - no fake install/download badges
 - no release tag language before release
 - no package behavior or pyproject changes in docs/assets lanes
