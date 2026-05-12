@@ -72,7 +72,7 @@ def _default_config(project_path: Path) -> dict[str, object]:
             "init": {"status": "initialized"},
             "resume": {"status": "available"},
             "verify": {"status": "available"},
-            "handoff": {"status": "not_implemented"},
+            "handoff": {"status": "available"},
         },
     }
 

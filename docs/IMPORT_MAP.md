@@ -1,6 +1,6 @@
 # Public Import Map
 
-> Status: draft release-preflight map. No private engine code has been imported into this public repo; public `init`, `resume`, and `verify` behavior are being rewritten clean in focused slices.
+> Status: draft release-preflight map. No private engine code has been imported into this public repo; public `init`, `resume`, `verify`, and `handoff` behavior are being rewritten clean in focused slices.
 
 This document controls what may move from the private implementation into the public AuditME alpha.
 
@@ -36,7 +36,7 @@ Nothing is approved for copy-as-is yet.
 | Default config | `src/auditme/config.py` | private config likely knows too much | create/load `auditme.config.json` with safe modes |
 | Generated folder contract | `src/auditme/artifacts.py` | public folder must be tiny and reviewable | create only expected `90_AUDITME/` files, never overwrite unrelated files |
 | Verification model | `src/auditme/verify.py` | receipts must be honest, not magical | report pass/warn/fail and missing proof plainly |
-| Handoff update | `src/auditme/handoff.py` | public handoff should be small | record next move and timestamp without private queue machinery |
+| Handoff update | `src/auditme/commands/handoff.py` | public handoff should be small | record the next safe move without private queue machinery |
 
 ## Later
 
@@ -94,7 +94,7 @@ Nothing is approved for copy-as-is yet.
 - CLI entrypoint: `auditme.cli`
 - Handler: `auditme.commands.handoff`
 - State/config: project state reader/writer
-- Artifacts: resume/handoff state and timestamped next move
+- Artifacts: resume handoff section and next move
 - Tests: next move persisted, no unrelated file mutation
 - Avoid: importing private task queue automation
 

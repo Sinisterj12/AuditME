@@ -32,6 +32,7 @@ Target features:
 - `auditme init --project .`
 - `auditme resume --project .`
 - `auditme verify --project .`
+- `auditme handoff --project . --next-move "..."`
 - basic generated `90_AUDITME/` folder
 - default config
 - clean docs

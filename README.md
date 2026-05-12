@@ -6,7 +6,7 @@
 
 AuditME turns agent chaos into repo truth: durable project memory, scoped next moves, verification receipts, and session context that live with the code instead of disappearing into chat history.
 
-`v0.1.0-alpha` is in release-preflight. The public repo now has a clean Python package path plus focused `init`, `resume`, and `verify` behavior. `handoff` is still planned and will land in its own reviewed slice.
+`v0.1.0-alpha` is in release-preflight. The public repo now has a clean Python package path plus focused `init`, `resume`, `verify`, and `handoff` behavior.
 
 `public alpha prep` | `CLI-first` | `repo-local memory` | `honest verification`
 
@@ -36,11 +36,6 @@ The public alpha is intentionally small:
 auditme init --project .
 auditme resume --project .
 auditme verify --project .
-```
-
-Planned next:
-
-```bash
 auditme handoff --project . --next-move "Describe the next safe task"
 ```
 
@@ -49,10 +44,10 @@ Implemented now:
 - `auditme init --project .`
 - `auditme resume --project .`
 - `auditme verify --project .`
+- `auditme handoff --project . --next-move "..."`
 
 Still pending:
 
-- `auditme handoff --project . --next-move "..."`
 - license decision before real public release
 - final alpha release checklist
 
@@ -83,9 +78,10 @@ A new repo should be able to start with:
 auditme init --project .
 auditme resume --project .
 auditme verify --project .
+auditme handoff --project . --next-move "Describe the next safe task"
 ```
 
-`init` creates a small public-safe `90_AUDITME/` folder in the target project. `resume` prints useful context for the next agent. `verify` reports honest status: `pass` when proof exists, `warn` when proof is missing or weak, and failure for broken required state.
+`init` creates a small public-safe `90_AUDITME/` folder in the target project. `resume` prints useful context for the next agent. `verify` reports honest status: `pass` when proof exists, `warn` when proof is missing or weak, and failure for broken required state. `handoff` records the next safe move in repo-local state.
 
 In the first public alpha, `warn` is advisory and can exit successfully. Treat it as "not ready to claim done," not as a broken install.
 
@@ -98,8 +94,7 @@ Current state:
 - Public repo scaffold is live.
 - Python package skeleton is merged.
 - `auditme --help` works.
-- `auditme init`, `auditme resume`, and `auditme verify` are implemented in focused slices.
-- `auditme handoff` remains a placeholder until its own reviewed lane lands.
+- `auditme init`, `auditme resume`, `auditme verify`, and `auditme handoff` are implemented in focused slices.
 - Package build path is in place.
 - Private CodexSystem engine code and generated private runtime state are not imported.
 - License decision is still pending.

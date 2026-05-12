@@ -1,6 +1,6 @@
 # AuditME First 5 Minutes
 
-> Status: public alpha guide in progress. `auditme init`, `auditme resume`, and `auditme verify` are implemented in focused slices; `handoff` remains planned until its own slice lands.
+> Status: public alpha guide in progress. `auditme init`, `auditme resume`, `auditme verify`, and `auditme handoff` are implemented in focused slices.
 
 This is the plain-English path for a first-time user.
 
@@ -95,7 +95,7 @@ AuditME should never turn "I feel like it worked" into a green checkmark.
 
 ## What `auditme handoff` Should Do
 
-Planned command:
+Implemented command:
 
 ```bash
 auditme handoff --project . --next-move "Add tests for the init command"
@@ -105,7 +105,6 @@ Expected result:
 
 - update the repo-local handoff state
 - preserve the next safe move
-- record what still needs verification
 - avoid relying on chat history as the only memory
 
 ## The Mental Model

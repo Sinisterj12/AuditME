@@ -7,6 +7,7 @@ import sys
 from collections.abc import Sequence
 
 from . import __version__
+from .commands.handoff import render_handoff
 from .commands.init import initialize_project
 from .commands.resume import render_resume
 from .commands.verify import render_verify
@@ -48,7 +49,7 @@ def build_parser() -> argparse.ArgumentParser:
         "init": "Create public-safe AuditME artifacts in a target project.",
         "resume": "Print copyable AuditME context for a target project.",
         "verify": "Report honest AuditME pass/warn/fail status for a target project.",
-        "handoff": "Public alpha placeholder for auditme handoff.",
+        "handoff": "Record the next safe move for a target project.",
     }
 
     for command in PUBLIC_ALPHA_COMMANDS:
@@ -64,7 +65,7 @@ def build_parser() -> argparse.ArgumentParser:
         if command == "handoff":
             subparser.add_argument(
                 "--next-move",
-                required=False,
+                required=True,
                 help="Short description of the next safe task.",
             )
 
@@ -101,6 +102,14 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(render_verify(args.project), end="")
         except OSError as error:
             print(f"Could not verify AuditME: {error}", file=sys.stderr)
+            return 2
+        return 0
+
+    if args.command == "handoff":
+        try:
+            print(render_handoff(args.project, args.next_move), end="")
+        except OSError as error:
+            print(f"Could not handoff AuditME: {error}", file=sys.stderr)
             return 2
         return 0
 
