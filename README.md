@@ -1,148 +1,139 @@
 # AuditME
 
-> **Public alpha coming soon.** AuditME is in release-preflight now: docs are live, the public repo is staged, and the engine is being cleaned for a proper first release.
+![AuditME banner](assets/auditme-banner.svg)
 
-AuditME is a repo-native control layer for AI-assisted software work.
+> **Keep the agent. Lose the drift.**
 
-It was built from the perspective of a hardcore vibe coder: someone who can drive the vision, pressure-test the result, and ship real tools with AI agents, even without pretending to be a traditional software engineer.
+AuditME turns agent chaos into repo truth: durable project memory, scoped next moves, verification receipts, and session context that live with the code instead of disappearing into chat history.
 
-That is the point.
+`v0.1.0-alpha` is in release-preflight. The public repo now has a clean Python package path plus focused `init`, `resume`, and `verify` behavior. `handoff` is still planned and will land in its own reviewed slice.
 
-Modern AI coding is powerful, but it can also turn into a very confident raccoon with commit access. AuditME exists to keep the raccoon useful.
+`public alpha prep` · `CLI-first` · `repo-local memory` · `honest verification`
 
-It keeps durable project memory, handoff context, task scope, verification receipts, and guardrail rules inside the repository instead of relying only on chat history.
+## Why It Exists
 
-AuditME is being prepared for public release. This repository is currently in launch-preflight mode while the engine is cleaned, packaged, documented, and separated from private/internal development history.
+AI coding agents are powerful, but long-running projects drift. A fresh session forgets decisions, scopes creep, proof gets fuzzy, and the repo starts depending on whatever the last chat remembered.
 
-## The problem
+Without AuditME, project memory gets trapped in chat instead of living with the repo.
 
-AI coding agents are powerful, but long-running projects drift.
+AuditME gives that work a control layer: a small, repo-local operating surface that tells agents what is true, what is allowed, what proof exists, and what should happen next.
 
-Common failure modes:
+## Without AuditME / With AuditME
 
-- The agent forgets prior decisions.
-- The agent edits outside the intended scope.
-- The agent says work is done without proof.
-- A new session wastes time rediscovering the repo.
-- Multiple agents create conflicting assumptions.
-- Project memory lives in chat instead of version control.
-- The human operator knows the goal, but the repo does not carry enough truth forward.
+| Without AuditME | With AuditME |
+| --- | --- |
+| Context is scattered across chats. | Project memory lives in repo-local files. |
+| New sessions rediscover the same facts. | `auditme resume` gives a copyable starting point. |
+| "Done" can mean "the agent sounded confident." | `auditme verify` separates proof, warnings, and failures. |
+| Scope depends on prompt discipline. | Guardrails and task context travel with the project. |
+| Handoffs are fragile. | The next move is meant to be recorded before the session ends. |
 
-AuditME exists to make those problems visible, reviewable, and harder to repeat.
+## Command Path
 
-## Why vibe coders need this
-
-Vibe coding is not magic. It is fast human direction plus AI execution.
-
-That speed is the advantage, but it also creates risk:
-
-- too much trust in the last AI response
-- too many half-finished branches
-- too much context trapped in chat windows
-- too many "done" claims without proof
-- too much accidental drift from the original idea
-
-AuditME gives the workflow a memory spine.
-
-It helps the human stay in charge while giving the agent enough durable context to work like it has been paying attention. Wild concept.
-
-## What AuditME provides
-
-Planned public release capabilities:
-
-- Repo-local project memory
-- Agent resume and handoff files
-- Approved task queues
-- Verification receipt tracking
-- Guardrails for unsafe or lazy AI changes
-- Configurable rule packs
-- CLI-first workflow
-- Optional desktop visibility layer
-- Release and preflight checks for AI-assisted repos
-
-## Intended workflow
-
-The public workflow is being designed around a small command set:
+The public alpha is intentionally small:
 
 ```bash
-auditme init
-auditme resume
-auditme verify
-auditme handoff
+auditme init --project .
+auditme resume --project .
+auditme verify --project .
+auditme handoff --project . --next-move "Describe the next safe task"
 ```
 
-The goal is simple: a developer, builder, or AI agent should be able to enter a repo, run AuditME, and quickly understand what is true, what is allowed, what changed, what proof exists, and what should happen next.
+Implemented now:
 
-## Current status
+- `auditme init --project .`
+- `auditme resume --project .`
+- `auditme verify --project .`
 
-This repository is not yet the functional alpha release.
+Planned next:
 
-Current phase:
+- `auditme handoff --project . --next-move "..."`
+- license decision before real public release
+- final alpha release checklist
 
-- Public repo scaffold created
-- Minimal package skeleton merged
-- `auditme init` behavior implemented in a focused slice
-- `auditme resume` behavior implemented in a focused slice
-- `auditme verify` behavior implemented in a focused slice
-- Launch documentation prepared
-- `auditme handoff` behavior pending focused release preflight
-- Internal/private paths being removed
-- Packaging and install flow being finalized
-- Security and adopter guidance being written
+## What It Is
 
-## Coming soon
+AuditME is:
 
-The first public target is `v0.1.0-alpha`.
+- a repo-native memory and verification layer for AI-assisted development
+- a CLI-first workflow for serious builders and small teams
+- a way to make agent handoffs, task scope, decisions, and proof easier to inspect
+- a public-safe package being prepared for `v0.1.0-alpha`
 
-Expected first-release focus:
+## What It Is Not
 
-- Clean Python package install
-- `auditme init`
-- `auditme resume`
-- `auditme verify`
-- `auditme handoff`
-- Path-neutral project detection
-- Safe generated repo-memory files
-- Basic config model
-- Honest verification reporting
+AuditME is not:
 
-Watch this repo if you want to follow the public release work.
+- a replacement for a coding agent
+- a guarantee that generated code is correct
+- a cloud sync system
+- a desktop dashboard in the first alpha
+- a place to store secrets, customer data, private relay notes, or personal machine paths
 
-## Who this is for
+## First 5 Minutes
 
-AuditME is for builders using AI coding agents heavily, especially people working across multiple sessions, branches, repos, or agents.
+A new repo should be able to start with:
 
-It is especially useful when the cost of AI drift is high: production apps, customer-facing tools, internal business systems, or long-running projects where context matters.
+```bash
+auditme init --project .
+auditme resume --project .
+auditme verify --project .
+```
 
-It is also for hardcore vibe coders who are done apologizing for building with AI and would rather put guardrails around the chaos than pretend the chaos is not there.
+`init` creates a small public-safe `90_AUDITME/` folder in the target project. `resume` prints useful context for the next agent. `verify` reports honest status: `pass` when proof exists, `warn` when proof is missing or weak, and failure for broken required state.
 
-## Public release principles
+In the first public alpha, `warn` is advisory and can exit successfully. Treat it as "not ready to claim done," not as a broken install.
+
+## Current Status
+
+This repository is not the official release yet. It is the clean public release-preflight repo.
+
+Current state:
+
+- Public repo scaffold is live.
+- Python package skeleton is merged.
+- `auditme --help` works.
+- `auditme init`, `auditme resume`, and `auditme verify` are implemented in focused slices.
+- `auditme handoff` remains a placeholder until its own reviewed lane lands.
+- Package build path is in place.
+- Private CodexSystem engine code and generated private runtime state are not imported.
+- License decision is still pending.
+
+## Who It Is For
+
+AuditME is for builders using AI coding agents across real projects: solo operators, small teams, product builders, and engineers who want agents to move fast without losing the thread.
+
+It is especially useful when the cost of drift is high: production apps, customer-facing tools, internal business systems, long-running branches, or repos touched by more than one agent.
+
+## Release Principles
 
 AuditME should be:
 
-- Easy to install
-- Safe by default
-- Configurable per repo
-- Honest about verification status
-- Clear for humans and agents
-- Useful without requiring private workflow knowledge
-- Strong enough for serious projects, but simple enough for solo builders
+- easy to install
+- safe by default
+- path-neutral
+- honest about verification status
+- clear for humans and agents
+- useful without private workflow knowledge
+- strong enough for serious projects, but small enough to understand quickly
 
-## Repository state
+## Docs
 
-This repo currently contains launch documentation, the first package skeleton, and focused `auditme init` and `auditme resume` behavior slices. Remaining public engine behavior will be added only after focused release-preflight review.
-
-See:
+Start here:
 
 - [First 5 Minutes](docs/FIRST_5_MINUTES.md)
-- [Release Preflight](docs/RELEASE_PREFLIGHT.md)
 - [Adopter Guide](docs/ADOPTER_GUIDE.md)
+- [Release Preflight](docs/RELEASE_PREFLIGHT.md)
+- [Smoke Test Plan](docs/SMOKE_TEST_PLAN.md)
+
+Release and implementation planning:
+
 - [Architecture Direction](docs/ARCHITECTURE.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Code Publication Plan](docs/CODE_PUBLICATION_PLAN.md)
 - [Package And Install Plan](docs/PACKAGE_INSTALL_PLAN.md)
 - [Public Import Map](docs/IMPORT_MAP.md)
-- [Smoke Test Plan](docs/SMOKE_TEST_PLAN.md)
+- [Brand Direction](docs/BRAND_DIRECTION.md)
 
 ## License
 
