@@ -119,6 +119,7 @@ auditme --help
 auditme init --project <fresh-test-repo>
 auditme resume --project <fresh-test-repo>
 auditme verify --project <fresh-test-repo>
+auditme handoff --project <fresh-test-repo> --next-move "Continue safely"
 ```
 
 If using `uv` during development, also test:
@@ -127,6 +128,9 @@ If using `uv` during development, also test:
 uv sync
 uv run auditme --help
 uv run auditme init --project <fresh-test-repo>
+uv run auditme resume --project <fresh-test-repo>
+uv run auditme verify --project <fresh-test-repo>
+uv run auditme handoff --project <fresh-test-repo> --next-move "Continue safely"
 ```
 
 ## Suggested release stages
@@ -141,6 +145,7 @@ Includes:
 - `init`
 - `resume`
 - `verify`
+- `handoff`
 - basic generated folder
 - default config
 - docs
