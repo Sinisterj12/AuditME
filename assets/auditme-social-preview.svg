@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1280 640">
+  <title id="title">AuditME social preview</title>
+  <desc id="desc">AuditME is coming soon, keeping AI coding work grounded in repo truth, proof, and handoff.</desc>
+  <defs>
+    <linearGradient id="preview-bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.45" stop-color="#1f2937"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="156" y1="440" x2="1026" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="0.5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <filter id="preview-shadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020617" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#preview-bg)"/>
+  <path d="M0 506c146-72 286-96 420-73 155 26 276 109 457 51 145-46 234-151 403-130v286H0Z" fill="#020617" opacity="0.3"/>
+  <g opacity="0.52">
+    <path d="M754 128c68 52 128 56 190 8 48-36 98-37 147-2" fill="none" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 20"/>
+    <circle cx="1042" cy="140" r="8" fill="#a3e635"/>
+  </g>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="880" y="74" width="214" height="50" rx="25" fill="#f8fafc" opacity="0.96"/>
+    <text x="987" y="100" fill="#0f172a" font-size="21" font-weight="800" text-anchor="middle" dominant-baseline="middle">COMING SOON</text>
+    <text x="120" y="194" fill="#f8fafc" font-size="78" font-weight="850">AuditME</text>
+    <text x="124" y="258" fill="#cbd5e1" font-size="34" font-weight="700">Keep the agent. Lose the drift.</text>
+    <text x="126" y="310" fill="#99f6e4" font-size="26" font-weight="600">Repo truth, proof, and handoff for AI-assisted development.</text>
+  </g>
+  <g filter="url(#preview-shadow)">
+    <path d="M156 440c154-104 274-91 404-70 146 24 240 14 376-72 62-39 115-48 190-38" fill="none" stroke="url(#signal)" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="156" cy="440" r="22" fill="#f97316"/>
+    <circle cx="560" cy="370" r="22" fill="#38bdf8"/>
+    <circle cx="1126" cy="260" r="22" fill="#a3e635"/>
+    <rect x="170" y="386" width="178" height="104" rx="18" fill="#f8fafc"/>
+    <path d="M204 421h104M204 455h72" stroke="#0f172a" stroke-width="11" stroke-linecap="round"/>
+    <rect x="842" y="342" width="236" height="124" rx="20" fill="#f8fafc"/>
+    <path d="M880 382h142M880 418h102M880 450h126" stroke="#0f172a" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="800">
+    <rect x="120" y="536" width="132" height="40" rx="20" fill="#f8fafc" opacity="0.96"/>
+    <text x="186" y="557" fill="#0f172a" text-anchor="middle" dominant-baseline="middle">memory</text>
+    <rect x="272" y="536" width="150" height="40" rx="20" fill="#f8fafc" opacity="0.96"/>
+    <text x="347" y="557" fill="#0f172a" text-anchor="middle" dominant-baseline="middle">guardrails</text>
+    <rect x="442" y="536" width="132" height="40" rx="20" fill="#f8fafc" opacity="0.96"/>
+    <text x="508" y="557" fill="#0f172a" text-anchor="middle" dominant-baseline="middle">receipts</text>
+    <rect x="594" y="536" width="124" height="40" rx="20" fill="#f8fafc" opacity="0.96"/>
+    <text x="656" y="557" fill="#0f172a" text-anchor="middle" dominant-baseline="middle">handoff</text>
+  </g>
+</svg>

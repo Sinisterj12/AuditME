@@ -1,6 +1,6 @@
 # Public Import Map
 
-> Status: release-preflight map. No private engine code has been imported into this public repo; public `init`, `resume`, `verify`, and `handoff` behavior has been rewritten clean in focused slices.
+> Status: future release-preflight map. AuditME is currently in public coming-soon mode; use this as the cleanup guide for a later official alpha import.
 
 This document controls what may move from the private implementation into the public AuditME alpha.
 

@@ -1,6 +1,8 @@
 # Code Publication Plan
 
-This plan defines how code should move from the private/internal AuditME development repo into the public AuditME release repo.
+This plan defines how code should move from the private/internal AuditME development repo into the public AuditME release repo when the official alpha release window is approved.
+
+Current posture: public coming soon. Presentation docs and visual assets can be public now; release code publication can wait.
 
 ## Goal
 

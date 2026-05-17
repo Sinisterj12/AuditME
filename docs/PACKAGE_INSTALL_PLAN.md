@@ -1,6 +1,6 @@
 # Package And Install Plan
 
-> Status: release-preflight plan. The public alpha command spine has been rewritten clean in focused slices; no private engine code or private runtime state has been imported.
+> Status: future release-preflight plan. AuditME is currently in public coming-soon mode; do not treat this file as proof that the package has been officially released.
 
 This plan defines the public packaging target for AuditME `v0.1.0-alpha`.
 

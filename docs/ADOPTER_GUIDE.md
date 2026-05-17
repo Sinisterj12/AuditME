@@ -1,6 +1,8 @@
 # Adopter Guide
 
-This guide describes the intended public adoption experience for AuditME.
+> Status: coming-soon adoption guide. This describes the intended public alpha experience, not a current release announcement.
+
+This guide describes the intended public adoption experience for AuditME once the first alpha is officially released.
 
 AuditME is not intended to replace a coding agent. It is intended to give coding agents a durable repo-local operating layer: project truth, allowed scope, handoff notes, verification receipts, and guardrail expectations.
 
@@ -16,7 +18,7 @@ AuditME is for:
 
 ## What AuditME should do for a new repo
 
-A new adopter should be able to run:
+A new adopter should eventually be able to run:
 
 ```bash
 auditme init --project .
@@ -35,7 +37,7 @@ Expected generated structure:
   auditme.config.json
 ```
 
-The first alpha uses this simple generated structure:
+The first alpha is planned around this simple generated structure:
 
 - Resume tells the next agent where to start.
 - Task queue tells the next agent what is approved.
@@ -55,7 +57,7 @@ After initialization, a user should be able to answer:
 
 ## Recommended first setup
 
-Public users should start with the plain init path:
+After release, public users should start with the plain init path:
 
 ```bash
 auditme init --project .
@@ -67,7 +69,7 @@ Suggested future modes:
 - `balanced`: block dangerous drift, warn on style issues
 - `strict`: enforce stronger proof and guardrail rules
 
-The first alpha writes `mode: advisory` by default and validates the known mode names. Deeper mode behavior can mature after the core command path is proven.
+The first alpha should write `mode: advisory` by default and validate the known mode names. Deeper mode behavior can mature after the core command path is proven.
 
 ## Agent handoff pattern
 

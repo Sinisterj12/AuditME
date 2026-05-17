@@ -20,6 +20,18 @@ AI coding agents are useful because they move fast. The risk is that speed can t
 
 AuditME should present itself as the control layer that pulls that motion back into the repo. The product does not shame AI-assisted work. It makes the workflow more honest, inspectable, and repeatable.
 
+## Current Public Posture
+
+AuditME is in coming-soon mode.
+
+The public repo should feel worth watching before the official installable alpha is launched. The right tone is confident but restrained: strong product idea, clear visual identity, honest status, and no claim that the release is live before the owner approves it.
+
+The README and preview docs should make three things obvious:
+
+- AuditME has a sharp purpose.
+- The official release is intentionally waiting.
+- Private implementation state is not being exposed as public product code.
+
 ## Visual Idea
 
 The visual system should show controlled chaos:
@@ -54,6 +66,7 @@ Avoid:
 - implying the alpha is already fully released
 - claiming commands or release artifacts before they land
 - making private CodexSystem behavior sound public
+- making the preview sound abandoned or unfinished in a careless way
 
 ## Public Release Boundaries
 
@@ -74,9 +87,10 @@ The README should lead with:
 2. tagline
 3. one-sentence product promise
 4. truthful current status
-5. compact problem framing
-6. "Without AuditME / With AuditME"
-7. command path
-8. current status and docs links
+5. coming-soon framing
+6. compact problem framing
+7. "Without AuditME / With AuditME"
+8. planned command path
+9. current status and docs links
 
 The first screen should make the repo worth starring or watching without overpromising what has shipped.

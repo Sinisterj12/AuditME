@@ -2,7 +2,13 @@
 
 This roadmap is intentionally conservative. AuditME should become public by getting smaller, clearer, and easier to install before it gets bigger.
 
-## Phase 0: Public scaffold
+## Current public posture
+
+AuditME is in coming-soon mode.
+
+This repo should make the product idea clear, credible, and public-safe before the official installable release is launched. The live release code, package proof, tag, release notes, and publication path can wait until the remaining private product work is ready.
+
+## Phase 0: Public preview scaffold
 
 Status: complete
 
@@ -10,6 +16,7 @@ Goals:
 
 - Create public repository
 - Add launch-facing README
+- Add public-safe coming-soon framing
 - Add release preflight checklist
 - Add adopter guide
 - Add architecture direction
@@ -19,9 +26,9 @@ Goals:
 
 Success standard:
 
-The public repo clearly explains what AuditME is and what must happen before code publication.
+The public repo clearly explains what AuditME is, why it matters, and what must happen before code publication.
 
-## Phase 1: v0.1.0-alpha
+## Phase 1: v0.1.0-alpha readiness
 
 Goal: clean install and basic repo memory.
 
@@ -40,6 +47,7 @@ Target features:
 
 Non-goals:
 
+- immediate public launch before the product is ready
 - full desktop polish
 - every internal CodexSystem feature
 - complex multi-agent orchestration

@@ -2,12 +2,15 @@
 
 This file tracks public-safe graphics work for AuditME.
 
+Current posture: coming soon. Visuals should make the repo feel intentional and memorable without implying the installable product has launched.
+
 ## Current Assets
 
 | Asset | Purpose | Status |
 | --- | --- | --- |
 | `assets/auditme-mark.svg` | Compact project mark for README, social previews, and future docs headers. | Added |
-| `assets/auditme-banner.svg` | README hero banner for the public repo. | Added |
+| `assets/auditme-banner.svg` | README hero banner for the public repo with coming-soon status. | Updated |
+| `assets/auditme-social-preview.svg` | Public-safe social preview / future GitHub card source art. | Added |
 
 ## Direction
 
@@ -33,7 +36,17 @@ Keep all graphics:
 
 ## Future Ideas
 
-- GitHub social preview image derived from `assets/auditme-banner.svg`
+- Export PNG social preview from `assets/auditme-social-preview.svg` if a platform needs raster upload
 - small docs header mark
 - command-flow diagram for First 5 Minutes
-- release announcement graphic after license and alpha checklist are complete
+- release announcement graphic after alpha release approval and final package proof
+
+## Visual QA Checklist
+
+Before adding or replacing public graphics:
+
+- confirm the asset is readable on GitHub light and dark themes
+- avoid screenshots of private tools, private repos, relay rows, customer data, or local machine paths
+- keep wording aligned with coming-soon status
+- avoid fake install buttons, fake package badges, or fake release claims
+- prefer simple repo-truth and handoff imagery over busy compliance visuals

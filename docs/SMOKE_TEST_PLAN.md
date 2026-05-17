@@ -1,6 +1,6 @@
 # Smoke Test Plan
 
-> Status: staged verification. Package/help, `init`, `resume`, `verify`, and `handoff` smoke checks are executable. See [Package And Install Plan](PACKAGE_INSTALL_PLAN.md) for the packaging target.
+> Status: future release verification plan. AuditME is currently in public coming-soon mode; these checks are the gate for a later official alpha.
 
 AuditME `v0.1.0-alpha` should not ship because the docs sound good. It should ship because a clean install and first-run path work in a fresh repo.
 

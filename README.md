@@ -6,9 +6,23 @@
 
 AuditME turns agent chaos into repo truth: durable project memory, scoped next moves, verification receipts, and session context that live with the code instead of disappearing into chat history.
 
-`v0.1.0-alpha` is in final release-preflight. The public repo now has a clean Python package path plus focused `init`, `resume`, `verify`, and `handoff` behavior.
+AuditME is in public preview. This repository is being prepared as the public home for the product, but the official installable release is intentionally not launched yet.
 
-`public alpha prep` | `CLI-first` | `repo-local memory` | `honest verification`
+`coming soon` | `AI coding workflow` | `repo-local memory` | `honest verification`
+
+## Coming Soon
+
+AuditME is for builders who use AI agents heavily and need the repo to remember what the chat forgets.
+
+The public launch is being held until the first alpha is clean enough to install, explain, and trust. For now, this repo is the public preview: the product story, brand direction, release boundaries, and planned first workflow.
+
+## Status
+
+AuditME is not officially released yet.
+
+This repo currently showcases the product direction, public-safe documentation, visual identity, and planned first command path. The release code and packaging flow are still being ironed out before a public alpha is tagged or announced.
+
+Watch this repo if you want to follow the public launch.
 
 ## Why It Exists
 
@@ -28,9 +42,9 @@ AuditME gives that work a control layer: a small, repo-local operating surface t
 | Scope depends on prompt discipline. | Guardrails and task context travel with the project. |
 | Handoffs are fragile. | The next move is meant to be recorded before the session ends. |
 
-## Command Path
+## Planned Command Path
 
-The public alpha is intentionally small:
+The first public alpha is intended to be intentionally small:
 
 ```bash
 auditme init --project .
@@ -39,17 +53,7 @@ auditme verify --project .
 auditme handoff --project . --next-move "Describe the next safe task"
 ```
 
-Implemented now:
-
-- `auditme init --project .`
-- `auditme resume --project .`
-- `auditme verify --project .`
-- `auditme handoff --project . --next-move "..."`
-
-Still pending:
-
-- final alpha release checklist
-- release tag and publication decision
+These commands describe the target public workflow. Until the alpha release is tagged, treat the repo as a preview of the product and its direction, not as an official installation source.
 
 ## What It Is
 
@@ -58,7 +62,7 @@ AuditME is:
 - a repo-native memory and verification layer for AI-assisted development
 - a CLI-first workflow for serious builders and small teams
 - a way to make agent handoffs, task scope, decisions, and proof easier to inspect
-- a public-safe package being prepared for `v0.1.0-alpha`
+- a product being prepared for a clean public alpha
 
 ## What It Is Not
 
@@ -70,9 +74,9 @@ AuditME is not:
 - a desktop dashboard in the first alpha
 - a place to store secrets, customer data, private relay notes, or personal machine paths
 
-## First 5 Minutes
+## First 5 Minutes, Once Released
 
-A new repo should be able to start with:
+A new repo should eventually be able to start with:
 
 ```bash
 auditme init --project .
@@ -83,21 +87,28 @@ auditme handoff --project . --next-move "Describe the next safe task"
 
 `init` creates a small public-safe `90_AUDITME/` folder in the target project. `resume` prints useful context for the next agent. `verify` reports honest status: `pass` when proof exists, `warn` when proof is missing or weak, and failure for broken required state. `handoff` records the next safe move in repo-local state.
 
-In the first public alpha, `warn` is advisory and can exit successfully. Treat it as "not ready to claim done," not as a broken install.
+In the first public alpha, `warn` is expected to be advisory and able to exit successfully. Treat it as "not ready to claim done," not as a broken install.
 
 ## Current Status
 
-This repository is not the official release yet. It is the clean public release-preflight repo.
+This repository is not the official release yet. It is the public coming-soon repo for AuditME.
 
 Current state:
 
-- Public repo scaffold is live.
-- Python package skeleton is merged.
-- `auditme --help` works.
-- `auditme init`, `auditme resume`, `auditme verify`, and `auditme handoff` are implemented in focused slices.
-- Package build path is in place.
-- Private CodexSystem engine code and generated private runtime state are not imported.
+- Public repo scaffold and brand direction are live.
+- Public-safe docs describe the intended product and first alpha shape.
+- Visual assets are present for the README and future launch materials.
+- Release packaging and official alpha publication are intentionally waiting.
+- Private implementation files, private workflow state, private relay notes, and generated private runtime state are not published here.
 - MIT license is in place.
+
+What is intentionally not here yet:
+
+- an official release tag
+- PyPI or install instructions
+- private implementation history
+- private generated AuditME state
+- customer, work, relay, or personal machine data
 
 ## Who It Is For
 
@@ -121,6 +132,7 @@ AuditME should be:
 
 Start here:
 
+- [Coming Soon](COMING_SOON.md)
 - [First 5 Minutes](docs/FIRST_5_MINUTES.md)
 - [Adopter Guide](docs/ADOPTER_GUIDE.md)
 - [Release Preflight](docs/RELEASE_PREFLIGHT.md)

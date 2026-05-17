@@ -1,13 +1,18 @@
 # Release Preflight
 
-This document defines what must be true before AuditME code is published into this public repository.
+This document defines what must be true before AuditME is treated as an official public release.
+
+Current posture: AuditME is in public coming-soon mode. The repo may showcase the product idea, brand, docs, and planned command path before the official installable alpha is tagged or announced.
 
 ## Release goal
 
 Create a clean, installable, public AuditME package that can be adopted by other repositories without carrying private CodexSystem history, local machine paths, or personal workflow assumptions.
 
+This goal is intentionally separate from the current public-preview goal. Preview docs can be polished now; package publication can wait.
+
 ## Do not publish yet if any of this is true
 
+- The product owner has not approved the alpha release window.
 - The code assumes a private development checkout or any personal local path.
 - Generated memory files contain private repo-specific context.
 - Commands require private Google Drive, private GitHub state, or local-only files.

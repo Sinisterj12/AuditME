@@ -1,6 +1,6 @@
 # AuditME First 5 Minutes
 
-> Status: public alpha guide in progress. `auditme init`, `auditme resume`, `auditme verify`, and `auditme handoff` are implemented in focused slices.
+> Status: coming-soon guide. AuditME is not officially released yet; this page describes the intended first alpha experience.
 
 This is the plain-English path for a first-time user.
 
@@ -20,7 +20,7 @@ What should the next session do?
 
 You add AuditME to a repo, let it create a small repo-local memory folder, then use that folder to keep AI sessions grounded.
 
-Target first run:
+Target first run after public release:
 
 ```bash
 auditme init --project .
@@ -33,7 +33,7 @@ If that feels too simple, good. The alpha should be boring on purpose.
 
 ## What `auditme init` Should Do
 
-Implemented command:
+Planned command:
 
 ```bash
 auditme init --project .
@@ -56,7 +56,7 @@ AuditME should create predictable files in one predictable folder. It should not
 
 ## What `auditme resume` Should Do
 
-Implemented command:
+Planned command:
 
 ```bash
 auditme resume --project .
@@ -76,7 +76,7 @@ This is the text you give to a fresh coding agent so it starts with repo truth i
 
 ## What `auditme verify` Should Do
 
-Implemented command:
+Planned command:
 
 ```bash
 auditme verify --project .
@@ -89,13 +89,13 @@ Expected result:
 - `fail` for broken required checks
 - clear next action
 
-In the public alpha, `warn` is intentionally non-blocking and exits successfully. Broken required state, invalid config, or a missing project path exits with an error.
+In the public alpha, `warn` should be intentionally non-blocking and exit successfully. Broken required state, invalid config, or a missing project path should exit with an error.
 
 AuditME should never turn "I feel like it worked" into a green checkmark.
 
 ## What `auditme handoff` Should Do
 
-Implemented command:
+Planned command:
 
 ```bash
 auditme handoff --project . --next-move "Add tests for the init command"
