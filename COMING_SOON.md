@@ -63,3 +63,15 @@ The public release will not include:
 ## Watch This Repo
 
 Star or watch this repo if you want to follow the public alpha as it gets closer.
+
+## What To Watch For
+
+The next public signals should be concrete, not hype:
+
+- clean install proof from a fresh checkout
+- a short first-alpha release candidate report
+- a tighter explanation of the trust model
+- examples that show how repo-local memory changes an agent handoff
+- no official package, tag, or announcement until those checks are done
+
+AuditME should feel like a product before it asks anyone to install it.

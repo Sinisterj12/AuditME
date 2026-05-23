@@ -16,11 +16,13 @@ AuditME is for builders who use AI agents heavily and need the repo to remember 
 
 The public launch is being held until the first alpha is clean enough to install, explain, and trust. For now, this repo is the public preview: the product story, brand direction, release boundaries, and planned first workflow.
 
+The release is intentionally suspenseful, not vague: the product spine is visible, the first command path is defined, and the remaining work is about proving the install, tightening the trust model, and making the first alpha feel boringly reliable.
+
 ## Status
 
 AuditME is not officially released yet.
 
-This repo currently showcases the product direction, public-safe documentation, visual identity, and planned first command path. The release code and packaging flow are still being ironed out before a public alpha is tagged or announced.
+This repo currently showcases the product direction, public-safe documentation, visual identity, and planned first command path. Release-candidate proof and publication approval are intentionally waiting before a public alpha is tagged or announced.
 
 Watch this repo if you want to follow the public launch.
 
@@ -136,12 +138,14 @@ Start here:
 - [First 5 Minutes](docs/FIRST_5_MINUTES.md)
 - [Adopter Guide](docs/ADOPTER_GUIDE.md)
 - [Release Preflight](docs/RELEASE_PREFLIGHT.md)
+- [Prelaunch Readiness Snapshot](docs/PRELAUNCH_READINESS.md)
 - [Smoke Test Plan](docs/SMOKE_TEST_PLAN.md)
 
 Release and implementation planning:
 
 - [Architecture Direction](docs/ARCHITECTURE.md)
 - [Roadmap](docs/ROADMAP.md)
+- [Productization Plan](docs/PRODUCTIZATION_PLAN.md)
 - [Code Publication Plan](docs/CODE_PUBLICATION_PLAN.md)
 - [Package And Install Plan](docs/PACKAGE_INSTALL_PLAN.md)
 - [Public Import Map](docs/IMPORT_MAP.md)
@@ -149,4 +153,4 @@ Release and implementation planning:
 
 ## License
 
-AuditME is released under the [MIT License](LICENSE).
+This repository uses the [MIT License](LICENSE).
