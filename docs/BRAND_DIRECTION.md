@@ -20,6 +20,8 @@ AI coding agents are useful because they move fast. The risk is that speed can t
 
 AuditME should present itself as the control layer that pulls that motion back into the repo. The product does not shame AI-assisted work. It makes the workflow more honest, inspectable, and repeatable.
 
+The emotional frame should be anticipation, not availability. A visitor should feel that a serious new agent-workflow layer is about to arrive, while still understanding that the official installable alpha is intentionally held back until the proof is ready.
+
 ## Current Public Posture
 
 AuditME is in coming-soon mode.
@@ -31,6 +33,14 @@ The README and preview docs should make three things obvious:
 - AuditME has a sharp purpose.
 - The official release is intentionally waiting.
 - Private implementation state is not being exposed as public product code.
+
+They should also make the repo feel active and close to a drop:
+
+- the first alpha spine is already visible
+- the release gates are explicit
+- the visual identity is deliberate
+- the project is being productized in public-safe layers
+- the next public signal is concrete proof, not vague hype
 
 ## Visual Idea
 
@@ -68,6 +78,23 @@ Avoid:
 - making private CodexSystem behavior sound public
 - making the preview sound abandoned or unfinished in a careless way
 
+Prefer suspenseful but honest language:
+
+- "coming soon"
+- "first alpha spine"
+- "release-candidate proof"
+- "repo truth"
+- "agent drift"
+- "before the official installable alpha"
+
+Avoid language that sounds like the package is already generally available:
+
+- "install now"
+- "available on PyPI"
+- "official release"
+- "download the alpha"
+- "production ready"
+
 ## Public Release Boundaries
 
 Brand polish must stay public-safe:
@@ -94,3 +121,15 @@ The README should lead with:
 9. current status and docs links
 
 The first screen should make the repo worth starring or watching without overpromising what has shipped.
+
+## Coming-Soon Narrative Shape
+
+The public coming-soon surface should follow this arc:
+
+1. Agents are fast, but project truth drifts.
+2. AuditME pulls memory, proof, boundaries, and next moves back into the repo.
+3. The first alpha is intentionally small: `init`, `resume`, `verify`, `handoff`.
+4. The repo is public now so the idea, visuals, and proof can be shaped safely.
+5. The official release waits for clean install proof, trust-boundary review, and owner approval.
+
+The story should make the wait feel disciplined, not stalled.

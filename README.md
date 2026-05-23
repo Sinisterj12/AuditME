@@ -6,6 +6,8 @@
 
 AuditME turns agent chaos into repo truth: durable project memory, scoped next moves, verification receipts, and session context that live with the code instead of disappearing into chat history.
 
+AI agents are getting faster. AuditME is being built for the part that speed does not solve: knowing what is true, what changed, what was proven, and what the next session should do without trusting a fading chat thread.
+
 AuditME is in public preview. This repository is being prepared as the public home for the product, but the official installable release is intentionally not launched yet.
 
 `coming soon` | `AI coding workflow` | `repo-local memory` | `honest verification`
@@ -17,6 +19,14 @@ AuditME is for builders who use AI agents heavily and need the repo to remember 
 The public launch is being held until the first alpha is clean enough to install, explain, and trust. For now, this repo is the public preview: the product story, brand direction, release boundaries, and planned first workflow.
 
 The release is intentionally suspenseful, not vague: the product spine is visible, the first command path is defined, and the remaining work is about proving the install, tightening the trust model, and making the first alpha feel boringly reliable.
+
+## The Shift
+
+AI coding is moving from one-off prompts to long-running agent work. That creates a new failure mode: the repo can keep compiling while the project truth drifts out of sight.
+
+AuditME is the answer to that drift.
+
+It is not trying to replace the agent. It is trying to give the agent a control layer: memory the repo owns, proof humans can inspect, and handoffs that survive a new chat, a new machine, or a new agent.
 
 ## Status
 
@@ -56,6 +66,16 @@ auditme handoff --project . --next-move "Describe the next safe task"
 ```
 
 These commands describe the target public workflow. Until the alpha release is tagged, treat the repo as a preview of the product and its direction, not as an official installation source.
+
+## What The First Alpha Should Feel Like
+
+The first alpha should feel like a seatbelt for agent-heavy development:
+
+- small enough to understand in one sitting
+- strong enough to stop obvious drift
+- honest enough to say `warn` when proof is missing
+- boring enough that generated files are easy to review
+- useful enough that a fresh agent can start with repo truth instead of chat archaeology
 
 ## What It Is
 
@@ -104,6 +124,8 @@ Current state:
 - Private implementation files, private workflow state, private relay notes, and generated private runtime state are not published here.
 - MIT license is in place.
 
+Current prelaunch proof is tracked in [Prelaunch Readiness](docs/PRELAUNCH_READINESS.md). That proof is a readiness signal, not a launch announcement.
+
 What is intentionally not here yet:
 
 - an official release tag
@@ -117,6 +139,18 @@ What is intentionally not here yet:
 AuditME is for builders using AI coding agents across real projects: solo operators, small teams, product builders, and engineers who want agents to move fast without losing the thread.
 
 It is especially useful when the cost of drift is high: production apps, customer-facing tools, internal business systems, long-running branches, or repos touched by more than one agent.
+
+If your agents move quickly but your project memory lives in screenshots, scattered chats, and "I think we already did that," AuditME is being built for you.
+
+## Follow The Drop
+
+The next public signals should be visible here before the alpha is released:
+
+- sharper examples of repo-local memory and handoff flow
+- clean release-candidate proof from fresh installs
+- tighter security and trust-boundary docs
+- public-safe visuals that show agent chaos becoming repo truth
+- one clear owner-approved moment when coming soon becomes installable
 
 ## Release Principles
 
@@ -139,6 +173,7 @@ Start here:
 - [Adopter Guide](docs/ADOPTER_GUIDE.md)
 - [Release Preflight](docs/RELEASE_PREFLIGHT.md)
 - [Prelaunch Readiness Snapshot](docs/PRELAUNCH_READINESS.md)
+- [Public Repo Experience](docs/PUBLIC_REPO_EXPERIENCE.md)
 - [Smoke Test Plan](docs/SMOKE_TEST_PLAN.md)
 
 Release and implementation planning:

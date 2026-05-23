@@ -6,6 +6,12 @@ AuditME is a repo-native control layer for AI-assisted development.
 
 It is being built for people who work with coding agents across real projects and need stronger continuity than chat history can provide.
 
+The promise is simple:
+
+```text
+Keep the agent. Lose the drift.
+```
+
 ## The Problem
 
 AI agents move quickly, but long-running projects can drift:
@@ -41,6 +47,19 @@ auditme handoff --project . --next-move "Describe the next safe task"
 
 That is the target public path, not a release announcement.
 
+## Why This Feels Different
+
+Most AI coding tools focus on making the agent more powerful.
+
+AuditME focuses on what happens around the agent:
+
+- the memory that should survive the chat
+- the proof that should survive confidence
+- the next move that should survive handoff
+- the boundaries that should survive speed
+
+The product bet is that serious AI-assisted work needs a repo-native control layer, not just a smarter prompt.
+
 ## Current Status
 
 AuditME is not officially released yet.
@@ -48,6 +67,8 @@ AuditME is not officially released yet.
 This repository is public so the product direction, docs, and visual identity can be shaped in the open before the installable alpha is launched.
 
 The release code, package proof, final release notes, and publication path are intentionally waiting until the alpha is ready.
+
+The current repo is meant to feel alive before it is installable: product story, release boundaries, first alpha spine, visual direction, and prelaunch proof are being assembled in public-safe form.
 
 ## What Will Not Be Published
 
@@ -75,3 +96,16 @@ The next public signals should be concrete, not hype:
 - no official package, tag, or announcement until those checks are done
 
 AuditME should feel like a product before it asks anyone to install it.
+
+## The Line Before Launch
+
+The intended stopping point before release is clear:
+
+- the repo looks intentional
+- the docs explain the product without private context
+- the first command path is understandable
+- the trust boundaries are visible
+- the release-candidate proof is current
+- the only thing left is explicit approval to tag, publish, and announce
+
+That is the edge AuditME is moving toward.

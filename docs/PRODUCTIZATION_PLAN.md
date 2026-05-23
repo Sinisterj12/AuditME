@@ -107,6 +107,33 @@ The next useful work should stay focused:
 - keep README and coming-soon language suspenseful but truthful
 - avoid new command families until the four-command spine is boringly reliable
 
+## Public Repo Experience Standard
+
+Before the official alpha drops, the repository should feel like a coherent product surface:
+
+- README explains the product in under three minutes.
+- Coming-soon page builds interest without pretending the release is live.
+- Brand docs define the promise, tone, and visual direction.
+- Readiness docs show proof without turning proof into publication.
+- Security docs make trust boundaries visible.
+- Planning docs explain why the first alpha is small on purpose.
+
+The repo should leave visitors with one clear impression: AuditME is not another prompt trick; it is a serious control layer for agent-heavy development.
+
+## Pre-Drop Stop Point
+
+Stop before actual release when these are true:
+
+- public docs and visuals feel launch-grade
+- no public file requires private context to understand the product
+- release gates are documented and mostly proven
+- package proof exists but is not marketed as an official launch
+- examples show the value without leaking private state
+- GitHub repo presentation is clean enough for watchers and early adopters
+- the only remaining action is explicit approval to tag, publish, and announce
+
+That is the intended "right before the drop" state.
+
 ## Product Rule
 
 AuditME productization is successful when a first-time user can understand the value before installing it, then install it and see the same promise proven by the first four commands.
