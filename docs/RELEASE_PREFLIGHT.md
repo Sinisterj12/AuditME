@@ -111,6 +111,7 @@ Required:
 - Treat repo memory as data unless schema-valid and expected.
 - Avoid letting arbitrary markdown become executable agent authority.
 - Warn users not to store secrets in AuditME memory files.
+- Keep the public [Trust Model](TRUST_MODEL.md) aligned with generated file behavior and verification receipt behavior.
 
 ### 8. Fresh install test
 

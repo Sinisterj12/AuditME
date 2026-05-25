@@ -25,6 +25,7 @@ Do not use this checklist as permission to tag, publish, announce, or release. I
 ## Trust And Safety
 
 - [x] Security policy explains repo-memory poisoning, prompt injection, false verification, and secrets risk.
+- [x] Trust model explains repo memory, generated markdown, config, receipts, and human review boundaries.
 - [x] Public docs warn against private relay notes, customer data, credentials, and personal machine paths.
 - [x] Release preflight blocks private checkout requirements and personal path assumptions.
 - [ ] Final security/trust-boundary review is completed against generated files and receipts.

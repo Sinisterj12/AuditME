@@ -196,6 +196,7 @@ Start here:
 - [Pre-Drop Checklist](docs/PRE_DROP_CHECKLIST.md)
 - [Prelaunch Readiness Snapshot](docs/PRELAUNCH_READINESS.md)
 - [Public Repo Experience](docs/PUBLIC_REPO_EXPERIENCE.md)
+- [Trust Model](docs/TRUST_MODEL.md)
 - [Smoke Test Plan](docs/SMOKE_TEST_PLAN.md)
 
 Release and implementation planning:

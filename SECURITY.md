@@ -8,6 +8,8 @@ AuditME is in public alpha release-preflight mode. The public CLI command spine 
 
 Security review is required before a stable release.
 
+The public trust model is tracked in [docs/TRUST_MODEL.md](docs/TRUST_MODEL.md). That document explains what AuditME should trust, what it should only summarize, and what must remain human-reviewable before the official alpha release.
+
 ## Main risks
 
 ### Repo-memory poisoning
