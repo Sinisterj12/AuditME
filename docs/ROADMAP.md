@@ -28,6 +28,25 @@ Success standard:
 
 The public repo clearly explains what AuditME is, why it matters, and what must happen before code publication.
 
+## Phase 0.5: Pre-drop public readiness
+
+Status: in progress
+
+Goal: make the public repo feel intentional, credible, and worth watching before the official installable alpha is released.
+
+Includes:
+
+- sharper README and coming-soon narrative
+- public-safe example handoff flow
+- teaser copy bank for consistent suspenseful language
+- trust model and security boundary docs
+- pre-drop checklist
+- GitHub issue and PR templates that protect the release boundary
+
+Success standard:
+
+The repo should feel like something serious is about to drop, while still making it impossible to confuse the current state with an official release.
+
 ## Phase 1: v0.1.0-alpha readiness
 
 Goal: clean install and basic repo memory.

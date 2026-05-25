@@ -6,6 +6,15 @@ This guide describes the intended public adoption experience for AuditME once th
 
 AuditME is not intended to replace a coding agent. It is intended to give coding agents a durable repo-local operating layer: project truth, allowed scope, handoff notes, verification receipts, and guardrail expectations.
 
+## Before The Alpha
+
+AuditME is still in coming-soon mode. If you are reading before the official installable alpha:
+
+- use [Example Handoff Flow](EXAMPLE_HANDOFF_FLOW.md) to understand the intended handoff feel
+- use [Pre-Drop Checklist](PRE_DROP_CHECKLIST.md) to see what remains before release
+- use [Trust Model](TRUST_MODEL.md) to understand how repo memory and verification receipts should be treated
+- do not treat the planned command path as an official install instruction yet
+
 ## Intended audience
 
 AuditME is for:

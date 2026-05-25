@@ -51,6 +51,23 @@ This snapshot does not approve:
 - broad code import from private/internal repositories
 - desktop, sync, fleet, or multi-agent orchestration scope
 
+## Latest Docs-Only Pre-Drop Work
+
+Latest docs-readiness date: 2026-05-25
+
+Docs-readiness summary:
+
+| Area | Result |
+| --- | --- |
+| Visitor journey | README now points to coming-soon status, example handoff flow, pre-drop checklist, and readiness proof |
+| Example value | Public-safe example handoff flow added without private state or release instructions |
+| Release boundary | Pre-drop checklist added to separate docs readiness from tag/publish/announce approval |
+| Teaser language | Teaser copy bank added for consistent suspenseful public language |
+| Trust model | Public trust model added for config, generated markdown, receipts, and review boundaries |
+| GitHub presentation | PR and issue templates added with explicit no-release/no-private-data boundaries |
+
+This was documentation and presentation work only. It did not change product-code behavior and did not release AuditME.
+
 ## Remaining Release-Candidate Work
 
 Before an official alpha, finish:
