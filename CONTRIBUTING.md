@@ -58,6 +58,18 @@ A good PR should include:
 - risks or limitations
 - follow-up work if needed
 
+Use the repository pull request template when opening a PR. Keep release-status language explicit: docs and prelaunch polish are welcome, but tags, publishing, official release announcements, and broad product-code drops require owner approval.
+
+## Issue expectations
+
+Use the issue templates for:
+
+- prelaunch docs, trust, or positioning gaps
+- first-alpha behavior feedback
+- release-blocking risks
+
+Do not file issues containing secrets, private relay notes, customer data, personal machine paths, or generated private runtime state.
+
 ## Coding style
 
 Prefer boring, readable code over clever code.

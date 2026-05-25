@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: AuditME coming-soon status
+    url: https://github.com/Sinisterj12/AuditME/blob/main/COMING_SOON.md
+    about: Read the current public status before assuming the alpha is released.

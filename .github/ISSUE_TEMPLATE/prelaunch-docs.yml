@@ -1,0 +1,38 @@
+name: Prelaunch docs or positioning
+description: Improve the public coming-soon story, trust docs, examples, visuals, or release-boundary clarity.
+title: "[prelaunch-docs]: "
+labels: ["docs", "prelaunch"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for public-safe docs, brand, trust, or repo-presentation work before the official alpha release.
+  - type: textarea
+    id: issue
+    attributes:
+      label: What needs improvement?
+      description: Describe the gap in the public repo experience.
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - README / front door
+        - Coming-soon narrative
+        - Trust / security docs
+        - Example / first-time visitor docs
+        - Visual identity / graphics
+        - Release-boundary clarity
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Release boundary
+      options:
+        - label: This does not request a tag, PyPI publish, GitHub Release, or official launch announcement.
+          required: true
+        - label: This does not include secrets, credentials, customer data, private relay notes, or personal machine paths.
+          required: true
