@@ -107,6 +107,11 @@ The next useful work should stay focused:
 - keep README and coming-soon language suspenseful but truthful
 - avoid new command families until the four-command spine is boringly reliable
 
+Current public-safe example surface:
+
+- `docs/EXAMPLE_HANDOFF_FLOW.md` shows the intended handoff feel without using private repo memory, private relay data, or official install claims.
+- `docs/PRE_DROP_CHECKLIST.md` keeps the pre-release stop line visible so documentation polish does not drift into release action.
+
 ## Public Repo Experience Standard
 
 Before the official alpha drops, the repository should feel like a coherent product surface:

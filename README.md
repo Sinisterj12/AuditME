@@ -152,6 +152,15 @@ The next public signals should be visible here before the alpha is released:
 - public-safe visuals that show agent chaos becoming repo truth
 - one clear owner-approved moment when coming soon becomes installable
 
+## What To Look At Now
+
+If you are evaluating the idea before the installable alpha drops, start with:
+
+- [Coming Soon](COMING_SOON.md) for the product story and current boundary.
+- [Example Handoff Flow](docs/EXAMPLE_HANDOFF_FLOW.md) for a public-safe preview of how AuditME should change an agent handoff.
+- [Pre-Drop Checklist](docs/PRE_DROP_CHECKLIST.md) for what remains before release.
+- [Prelaunch Readiness](docs/PRELAUNCH_READINESS.md) for proof captured so far.
+
 ## Release Principles
 
 AuditME should be:
@@ -169,9 +178,11 @@ AuditME should be:
 Start here:
 
 - [Coming Soon](COMING_SOON.md)
+- [Example Handoff Flow](docs/EXAMPLE_HANDOFF_FLOW.md)
 - [First 5 Minutes](docs/FIRST_5_MINUTES.md)
 - [Adopter Guide](docs/ADOPTER_GUIDE.md)
 - [Release Preflight](docs/RELEASE_PREFLIGHT.md)
+- [Pre-Drop Checklist](docs/PRE_DROP_CHECKLIST.md)
 - [Prelaunch Readiness Snapshot](docs/PRELAUNCH_READINESS.md)
 - [Public Repo Experience](docs/PUBLIC_REPO_EXPERIENCE.md)
 - [Smoke Test Plan](docs/SMOKE_TEST_PLAN.md)

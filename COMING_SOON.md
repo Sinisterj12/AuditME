@@ -97,6 +97,15 @@ The next public signals should be concrete, not hype:
 
 AuditME should feel like a product before it asks anyone to install it.
 
+## Preview The Shape
+
+The public repo now includes two pre-drop guides:
+
+- [Example Handoff Flow](docs/EXAMPLE_HANDOFF_FLOW.md): a public-safe walkthrough of the kind of repo-local handoff AuditME is meant to make boring and repeatable.
+- [Pre-Drop Checklist](docs/PRE_DROP_CHECKLIST.md): the line between "coming soon" and "ready to ask for release approval."
+
+These pages are intentionally previews. They build understanding and anticipation without claiming the official alpha has shipped.
+
 ## The Line Before Launch
 
 The intended stopping point before release is clear:

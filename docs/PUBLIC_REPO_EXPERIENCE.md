@@ -51,10 +51,12 @@ Recommended visitor path:
 
 1. `README.md` for the hook, status, and product promise.
 2. `COMING_SOON.md` for the prelaunch story.
-3. `docs/FIRST_5_MINUTES.md` for the intended user workflow.
-4. `docs/PRODUCTIZATION_PLAN.md` for how AuditME becomes a product.
-5. `docs/PRELAUNCH_READINESS.md` for current proof.
-6. `docs/RELEASE_PREFLIGHT.md` for official release gates.
+3. `docs/EXAMPLE_HANDOFF_FLOW.md` for a public-safe preview of the handoff value.
+4. `docs/FIRST_5_MINUTES.md` for the intended user workflow.
+5. `docs/PRODUCTIZATION_PLAN.md` for how AuditME becomes a product.
+6. `docs/PRE_DROP_CHECKLIST.md` for the pre-release stop line.
+7. `docs/PRELAUNCH_READINESS.md` for current proof.
+8. `docs/RELEASE_PREFLIGHT.md` for official release gates.
 
 ## Content Rule
 
@@ -69,3 +71,14 @@ The release waits for proof.
 ```
 
 If a page does not strengthen one of those messages, it should be simplified or deferred.
+
+## Pre-Drop Quality Bar
+
+The repo is ready to sit right before release when:
+
+- the first screen makes the problem and promise obvious
+- a public-safe example makes the workflow tangible
+- release gates are listed in one place
+- proof is current enough to be credible
+- there is no accidental "install now" language
+- the only remaining decision is explicit release approval
