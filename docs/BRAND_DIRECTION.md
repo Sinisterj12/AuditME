@@ -86,6 +86,8 @@ Prefer suspenseful but honest language:
 - "repo truth"
 - "agent drift"
 - "before the official installable alpha"
+- "proof should beat confidence"
+- "the repo should remember what the chat forgets"
 
 Avoid language that sounds like the package is already generally available:
 
@@ -133,3 +135,17 @@ The public coming-soon surface should follow this arc:
 5. The official release waits for clean install proof, trust-boundary review, and owner approval.
 
 The story should make the wait feel disciplined, not stalled.
+
+## Copy System
+
+Reusable public-safe copy belongs in `docs/TEASER_COPY_BANK.md`.
+
+Use that file for:
+
+- short taglines
+- social-preview language
+- README pull quotes
+- prelaunch update language
+- release-boundary-safe teaser copy
+
+Do not use teaser copy to imply AuditME is installable, tagged, published, or generally available.

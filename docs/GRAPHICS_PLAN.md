@@ -39,7 +39,21 @@ Keep all graphics:
 - Export PNG social preview from `assets/auditme-social-preview.svg` if a platform needs raster upload
 - small docs header mark
 - command-flow diagram for First 5 Minutes
+- small visual for `docs/EXAMPLE_HANDOFF_FLOW.md` showing chat drift becoming repo truth
 - release announcement graphic after alpha release approval and final package proof
+
+## Copy Pairing
+
+When graphics need text, prefer short lines from `docs/TEASER_COPY_BANK.md`.
+
+Best current pairings:
+
+- `Keep the agent. Lose the drift.`
+- `Proof should beat confidence.`
+- `The repo should remember what the chat forgets.`
+- `Agent work needs repo truth.`
+
+Avoid any graphic copy that sounds like `install now`, `available today`, or `official release`.
 
 ## Visual QA Checklist
 

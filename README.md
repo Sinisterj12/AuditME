@@ -152,6 +152,16 @@ The next public signals should be visible here before the alpha is released:
 - public-safe visuals that show agent chaos becoming repo truth
 - one clear owner-approved moment when coming soon becomes installable
 
+## Signal Lines
+
+Use these as the shorthand for what AuditME is becoming:
+
+- Keep the agent. Lose the drift.
+- Proof should beat confidence.
+- The repo should remember what the chat forgets.
+- Handoffs should survive the next session.
+- Agent work needs repo truth.
+
 ## What To Look At Now
 
 If you are evaluating the idea before the installable alpha drops, start with:
@@ -179,6 +189,7 @@ Start here:
 
 - [Coming Soon](COMING_SOON.md)
 - [Example Handoff Flow](docs/EXAMPLE_HANDOFF_FLOW.md)
+- [Teaser Copy Bank](docs/TEASER_COPY_BANK.md)
 - [First 5 Minutes](docs/FIRST_5_MINUTES.md)
 - [Adopter Guide](docs/ADOPTER_GUIDE.md)
 - [Release Preflight](docs/RELEASE_PREFLIGHT.md)
