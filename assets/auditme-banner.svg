@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1280 420">
   <title id="title">AuditME public preview banner</title>
-  <desc id="desc">AuditME is coming soon as a repo-native control layer for AI coding agents.</desc>
+  <desc id="desc">AuditME is coming soon as a repo-native control layer where proof beats confidence.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#0f172a"/>
@@ -35,7 +35,7 @@
   <g>
     <text x="120" y="122" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="800">AuditME</text>
     <text x="120" y="174" fill="#cbd5e1" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">Keep the agent. Lose the drift.</text>
-    <text x="120" y="214" fill="#99f6e4" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="500">Turn agent chaos into repo truth.</text>
+    <text x="120" y="214" fill="#99f6e4" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="500">Proof should beat confidence.</text>
   </g>
   <g font-family="Inter, Segoe UI, Arial, sans-serif">
     <rect x="970" y="54" width="176" height="42" rx="21" fill="#f8fafc" opacity="0.96"/>

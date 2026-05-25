@@ -9,8 +9,8 @@ Current posture: coming soon. Visuals should make the repo feel intentional and 
 | Asset | Purpose | Status |
 | --- | --- | --- |
 | `assets/auditme-mark.svg` | Compact project mark for README, social previews, and future docs headers. | Added |
-| `assets/auditme-banner.svg` | README hero banner for the public repo with coming-soon status. | Updated |
-| `assets/auditme-social-preview.svg` | Public-safe social preview / future GitHub card source art. | Added |
+| `assets/auditme-banner.svg` | README hero banner for the public repo with coming-soon status and proof-focused copy. | Updated |
+| `assets/auditme-social-preview.svg` | Public-safe social preview / future GitHub card source art with repo-memory copy. | Updated |
 
 ## Direction
 

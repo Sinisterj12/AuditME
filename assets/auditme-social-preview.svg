@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1280 640">
   <title id="title">AuditME social preview</title>
-  <desc id="desc">AuditME is coming soon, keeping AI coding work grounded in repo truth, proof, and handoff.</desc>
+  <desc id="desc">AuditME is coming soon, helping the repo remember what the chat forgets.</desc>
   <defs>
     <linearGradient id="preview-bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#0f172a"/>
@@ -27,7 +27,7 @@
     <text x="987" y="100" fill="#0f172a" font-size="21" font-weight="800" text-anchor="middle" dominant-baseline="middle">COMING SOON</text>
     <text x="120" y="194" fill="#f8fafc" font-size="78" font-weight="850">AuditME</text>
     <text x="124" y="258" fill="#cbd5e1" font-size="34" font-weight="700">Keep the agent. Lose the drift.</text>
-    <text x="126" y="310" fill="#99f6e4" font-size="26" font-weight="600">Repo truth, proof, and handoff for AI-assisted development.</text>
+    <text x="126" y="310" fill="#99f6e4" font-size="26" font-weight="600">The repo should remember what the chat forgets.</text>
   </g>
   <g filter="url(#preview-shadow)">
     <path d="M156 440c154-104 274-91 404-70 146 24 240 14 376-72 62-39 115-48 190-38" fill="none" stroke="url(#signal)" stroke-width="15" stroke-linecap="round"/>
