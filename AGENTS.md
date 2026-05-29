@@ -32,6 +32,7 @@
 - Do not make a private CodexSystem checkout, private Google Drive, private sync folder, or personal local path required public behavior.
 - Do not add desktop UI, fleet orchestration, lab harnesses, sync/dropzone workflows, standalone update machinery, or advanced multi-agent commands to `v0.1.0-alpha`.
 - Do not create branches, stage, commit, push, publish releases, or open PRs unless the user explicitly approves that operation.
+- **No Workday/Shift Clutter:** Do not add workday, shift tracking, clock-in/out timers, session stopwatch logic, or timing-log commands (like `WORKDAY_RESEARCH.md` integration) to the core CLI repository. All workday, session stopwatch, and timecard features must remain strictly decoupled: they live entirely inside the agent's external skills or in the **AuditME Desktop** visual dashboard companion, keeping this repository focused exclusively on general-purpose AI guardrails verification.
 
 ## CodexSystem Reference Rules
 - The private CodexSystem implementation may be inspected only when the user explicitly asks for read-only inventory, import mapping, or release comparison.
