@@ -14,7 +14,9 @@ authors = [
   { name = "AuditME contributors" }
 ]
 keywords = ["ai", "agents", "cli", "developer-tools", "verification"]
-dependencies = []
+dependencies = [
+  "openpyxl"
+]
 
 [project.urls]
 Homepage = "https://github.com/Sinisterj12/AuditME"
@@ -23,6 +25,7 @@ Issues = "https://github.com/Sinisterj12/AuditME/issues"
 
 [project.scripts]
 auditme = "auditme.cli:main"
+auditme-desktop = "auditme.desktop.filemapper:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

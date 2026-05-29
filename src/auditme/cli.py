@@ -13,7 +13,7 @@ from .commands.resume import render_resume
 from .commands.verify import render_verify
 
 
-PUBLIC_ALPHA_COMMANDS = ("init", "resume", "verify", "handoff")
+PUBLIC_ALPHA_COMMANDS = ("init", "resume", "verify", "handoff", "desktop")
 
 
 def _exit_code_from_system_exit(error: SystemExit) -> int:
@@ -50,6 +50,7 @@ def build_parser() -> argparse.ArgumentParser:
         "resume": "Print copyable AuditME context for a target project.",
         "verify": "Report honest AuditME pass/warn/fail status for a target project.",
         "handoff": "Record the next safe move for a target project.",
+        "desktop": "Launch the visual cockpit dashboard (AuditME Desktop).",
     }
 
     for command in PUBLIC_ALPHA_COMMANDS:
@@ -110,6 +111,18 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(render_handoff(args.project, args.next_move), end="")
         except OSError as error:
             print(f"Could not handoff AuditME: {error}", file=sys.stderr)
+            return 2
+        return 0
+
+    if args.command == "desktop":
+        try:
+            # Shift sys.argv so that the desktop module receives the project path
+            # instead of the command word 'desktop'
+            sys.argv = [sys.argv[0], args.project]
+            from .desktop.filemapper import main as desktop_main
+            desktop_main()
+        except Exception as error:
+            print(f"Could not launch AuditME Desktop: {error}", file=sys.stderr)
             return 2
         return 0
 
